@@ -1,5 +1,6 @@
 ---
 import { header } from "../config/menu.json";
+import ThemeSwitcher from "./ThemeSwitcher.astro";
 ---
 
 <header class="bg-base-100">
@@ -32,7 +33,9 @@ import { header } from "../config/menu.json";
           </ul>
         </nav>
 
-        <div class="flex items-center gap-4"></div>
+        <div class="flex items-center gap-4">
+          <ThemeSwitcher />
+        </div>
 
         <div class="block md:hidden">
           <button

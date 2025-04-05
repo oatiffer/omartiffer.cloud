@@ -33,7 +33,7 @@
 
 @layer theme {
   .light {
-    --font-sans: 'Fira Code Variable', 'sans-serif';
+    --font-sans: 'Jost Variable', 'sans-serif';
     --color-base-100: oklch(100% 0 0);
     --color-base-200: oklch(93% 0 0);
     --color-base-300: oklch(86% 0 0);
