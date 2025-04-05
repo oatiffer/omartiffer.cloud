@@ -1,4 +1,5 @@
 ---
+import Hero from "../components/Hero.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 
 const pageTitle = "Home Page";
@@ -7,4 +8,6 @@ const pageTitle = "Home Page";
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<BaseLayout pageTitle={pageTitle} />
+<BaseLayout pageTitle={pageTitle}>
+  <Hero />
+</BaseLayout>
