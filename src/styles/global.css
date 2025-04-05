@@ -33,39 +33,41 @@
 
 @layer theme {
   .light {
+    --font-sans: 'Fira Code Variable', 'sans-serif';
     --color-base-100: oklch(100% 0 0);
-    --color-base-200: oklch(98.462% 0.001 247.838);
-    --color-base-300: oklch(92.462% 0.001 247.838);
-    --color-base-content: oklch(20% 0 0);
-    --color-primary: oklch(90% 0.063 306.703);
-    --color-primary-content: oklch(49% 0.265 301.924);
-    --color-secondary: oklch(89% 0.058 10.001);
-    --color-secondary-content: oklch(51% 0.222 16.935);
-    --color-accent: oklch(90% 0.093 164.15);
-    --color-accent-content: oklch(50% 0.118 165.612);
-    --color-neutral: oklch(55% 0.046 257.417);
-    --color-neutral-content: oklch(92% 0.013 255.508);
-    --color-info: oklch(86% 0.127 207.078);
-    --color-info-content: oklch(52% 0.105 223.128);
-    --color-success: oklch(87% 0.15 154.449);
-    --color-success-content: oklch(52% 0.154 150.069);
-    --color-warning: oklch(83% 0.128 66.29);
-    --color-warning-content: oklch(55% 0.195 38.402);
-    --color-error: oklch(80% 0.114 19.571);
-    --color-error-content: oklch(50% 0.213 27.518);
+    --color-base-200: oklch(93% 0 0);
+    --color-base-300: oklch(86% 0 0);
+    --color-base-content: oklch(27.807% 0.029 256.847);
+    --color-primary: oklch(37.45% 0.189 325.02);
+    --color-primary-content: oklch(87.49% 0.037 325.02);
+    --color-secondary: oklch(53.92% 0.162 241.36);
+    --color-secondary-content: oklch(90.784% 0.032 241.36);
+    --color-accent: oklch(75.98% 0.204 56.72);
+    --color-accent-content: oklch(15.196% 0.04 56.72);
+    --color-neutral: oklch(27.807% 0.029 256.847);
+    --color-neutral-content: oklch(85.561% 0.005 256.847);
+    --color-info: oklch(72.06% 0.191 231.6);
+    --color-info-content: oklch(0% 0 0);
+    --color-success: oklch(64.8% 0.15 160);
+    --color-success-content: oklch(0% 0 0);
+    --color-warning: oklch(84.71% 0.199 83.87);
+    --color-warning-content: oklch(0% 0 0);
+    --color-error: oklch(71.76% 0.221 22.18);
+    --color-error-content: oklch(0% 0 0);
     --radius-selector: 1rem;
     --radius-field: 0.5rem;
     --radius-box: 1rem;
     --size-selector: 0.25rem;
     --size-field: 0.25rem;
     --border: 1px;
-    --depth: 0;
+    --depth: 1;
     --noise: 0;
   }
 }
 
 @layer theme {
   .dark {
+    --font-sans: 'Jost Variable', 'sans-serif';
     --color-base-100: oklch(20.768% 0.039 265.754);
     --color-base-200: oklch(19.314% 0.037 265.754);
     --color-base-300: oklch(17.86% 0.034 265.754);
