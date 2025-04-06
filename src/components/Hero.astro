@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import heroImage from "../assets/hero.png";
+import Social from "./Social.astro";
 ---
 
 <section class="lg:grid lg:place-content-center">
@@ -18,25 +19,15 @@ import heroImage from "../assets/hero.png";
       <p
         class="mt-4 text-base text-pretty text-base-content sm:text-lg/relaxed"
       >
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, nisi.
-        Natus, provident accusamus impedit minima harum corporis iusto.
+        I come from an on-prem world of servers, networking, and virtualization,
+        but these days I’m focused on cloud infrastructure. I’ve built a few
+        things on the front end and played around with backend code too. Right
+        now, I’m working toward my AWS Solutions Architect Associate cert and
+        progressively building skills in DevOps, like a good shell script, on
+        line at a time.
       </p>
 
-      <div class="mt-4 flex gap-4 sm:mt-6">
-        <a
-          class="inline-block border border-secondary rounded bg-secondary px-5 py-3 font-medium text-primary-content shadow-sm transition-colors hover:bg-secondary/80"
-          href="#"
-        >
-          Get Started
-        </a>
-
-        <a
-          class="inline-block rounded bg-base-300 border border-base-content px-5 py-3 font-medium text-base-content shadow-sm transition-colors hover:bg-base-100"
-          href="#"
-        >
-          Learn More
-        </a>
-      </div>
+      <Social />
     </div>
 
     <Image
