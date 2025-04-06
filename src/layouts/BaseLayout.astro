@@ -11,7 +11,7 @@ const { pageTitle } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en" class="light dark font-sans bg-base-200">
+<html lang="en" class="dark font-sans bg-base-200">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -29,3 +29,43 @@ const { pageTitle } = Astro.props;
     </div>
   </body>
 </html>
+
+<script>
+  // Get system theme preference
+  const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+
+  // Set the initial theme based on localStorage
+  const savedTheme = localStorage.getItem("theme");
+  if (!savedTheme) {
+    setTheme(systemTheme);
+  } else {
+    setTheme(savedTheme);
+  }
+
+  function setTheme(theme: string) {
+    // Set the initial visibility of the buttons
+    const darkButton = document.getElementById("button-dark");
+    const lightButton = document.getElementById("button-light");
+
+    switch (theme) {
+      case "dark":
+        if (!document.documentElement.classList.contains("dark")) {
+          document.documentElement.classList.add("dark");
+        }
+        document.documentElement.classList.remove("light");
+        darkButton?.classList.add("hidden");
+        lightButton?.classList.remove("hidden");
+        break;
+      case "light":
+        if (!document.documentElement.classList.contains("light")) {
+          document.documentElement.classList.add("light");
+        }
+        document.documentElement.classList.remove("dark");
+        darkButton?.classList.remove("hidden");
+        lightButton?.classList.add("hidden");
+        break;
+    }
+  }
+</script>
