@@ -1,0 +1,68 @@
+---
+import { header } from "../config/menu.json";
+import CloseIcon from "../assets/icons/close.svg";
+---
+
+<div
+  id="nav-mobile"
+  class="flex h-screen flex-col justify-between bg-base-200 md:hidden fixed z-50 left-full top-0 max-w-screen w-84 overflow-y-auto scrollbar-hide transition-transform duration-300"
+>
+  <div class="px-4 py-6">
+    <button
+      id="close-button"
+      class="rounded-sm border border-primary p-2 text-secondary-content transition hover:border-secondary cursor-pointer"
+    >
+      <CloseIcon class="h-4 w-4 stroke-base-content" />
+    </button>
+
+    <ul class="mt-10 space-y-1">
+      {
+        header.map((menuItem) => {
+          return (
+            <li>
+              <a
+                href={menuItem.url}
+                class="block px-4 py-4 text-lg font-medium text-center hover:text-primary transition-colors duration-200 ">
+                {menuItem.name}
+              </a>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </div>
+
+  <!-- <div class="sticky inset-x-0 bottom-0 bg-base-300">
+    <a href="#" class="flex items-center gap-2 p-4">
+      <img
+        alt=""
+        src="https://images.unsplash.com/photo-1600486913747-55e5470d6f40?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+        class="size-10 rounded-full object-cover"
+      />
+
+      <div>
+        <p class="text-xs">
+          <strong class="block font-medium">Eric Frusciante</strong>
+
+          <span> eric@frusciante.com </span>
+        </p>
+      </div>
+    </a>
+  </div> -->
+</div>
+
+<script>
+  // Toggle mobile menu
+  const closeButton = document.querySelector("#close-button");
+
+  closeButton?.addEventListener("click", () => {
+    const container = document.querySelector("#global-container");
+    const navMobile = document.querySelector("#nav-mobile");
+
+    navMobile?.classList.remove("-translate-x-full");
+    navMobile?.classList.add("translate-x-full");
+    container?.classList.remove("blur");
+    container?.classList.remove("pointer-events-none");
+    document.documentElement.classList.remove("overflow-hidden");
+  });
+</script>
