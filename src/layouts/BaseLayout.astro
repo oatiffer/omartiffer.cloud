@@ -25,7 +25,10 @@ const { pageTitle } = Astro.props;
   </head>
   <body>
     <NavMobile />
-    <div id="global-container" class="min-h-screen flex flex-col">
+    <div
+      id="global-container"
+      class="min-h-screen flex flex-col transition-all duration-300"
+    >
       <Header />
       <main class="transition-all duration-200">
         <slot />

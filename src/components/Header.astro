@@ -41,9 +41,11 @@ import HamburguerIcon from "../assets/icons/hamburguer.svg";
           <div class="block md:hidden">
             <button
               id="hamburguer-button"
-              class="rounded-sm border border-primary p-2 text-secondary-content transition hover:border-secondary cursor-pointer"
+              class="rounded-sm group border border-primary p-2 text-secondary-content transition-colors ease hover:border-secondary cursor-pointer"
             >
-              <HamburguerIcon class="h-5 w-5 stroke-base-content" />
+              <HamburguerIcon
+                class="h-4 w-4 stroke-primary group-hover:stroke-secondary transition-colors ease"
+              />
             </button>
           </div>
         </div>

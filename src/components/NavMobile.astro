@@ -10,9 +10,11 @@ import CloseIcon from "../assets/icons/close.svg";
   <div class="px-4 py-6">
     <button
       id="close-button"
-      class="rounded-sm border border-primary p-2 text-secondary-content transition hover:border-secondary cursor-pointer"
+      class="rounded-sm group border border-primary p-2 text-secondary-content transition-colors ease hover:border-secondary cursor-pointer"
     >
-      <CloseIcon class="h-4 w-4 stroke-base-content" />
+      <CloseIcon
+        class="h-4 w-4 stroke-primary group-hover:stroke-secondary transition-colors ease"
+      />
     </button>
 
     <ul class="mt-10 space-y-1">
