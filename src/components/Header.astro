@@ -25,7 +25,7 @@ import HamburguerIcon from "../assets/icons/hamburguer.svg";
                     <a
                       id="menu-item"
                       class="text-base-content text-lg hover:text-primary transition-colors duration-200"
-                      href={menuItem.url}>
+                      href="/">
                       {menuItem.name}
                     </a>
                   </li>
@@ -56,17 +56,17 @@ import HamburguerIcon from "../assets/icons/hamburguer.svg";
 
 <script>
   const menuItems = document.querySelectorAll("#menu-item");
-  const currentPath = window.location.pathname;
+  // const currentPath = window.location.pathname;
 
   // Highlight the current menu item
-  menuItems.forEach((item) => {
-    const itemPath = item.getAttribute("href");
-    if (currentPath === itemPath) {
-      item.classList.add("text-primary");
-    } else {
-      item.classList.remove("text-primary");
-    }
-  });
+  // menuItems.forEach((item) => {
+  //   const itemPath = item.getAttribute("href");
+  //   if (currentPath === itemPath) {
+  //     item.classList.add("text-primary");
+  //   } else {
+  //     item.classList.remove("text-primary");
+  //   }
+  // });
 
   // Toggle the mobile menu
   const hamburguerButton = document.querySelector("#hamburguer-button");
