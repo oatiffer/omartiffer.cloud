@@ -32,39 +32,42 @@ import LightIcon from "../assets/icons/lighttheme.svg";
 
 <script>
   // Add event listeners to the buttons
-  const themeSwitcher = document.querySelectorAll("[data-theme]");
+  const themeButtons = document.querySelectorAll("[data-theme]");
 
-  themeSwitcher.forEach((button) => {
-    button.addEventListener("click", () => {
+  themeButtons.forEach((button) => {
+    button.addEventListener("click", (e) => {
+      console.log(e);
       const selectedTheme: string = button.getAttribute("data-theme") ?? "";
 
       setTheme(selectedTheme);
       localStorage.setItem("theme", selectedTheme);
     });
-  });
 
-  function setTheme(theme: string) {
-    // Set the initial visibility of the buttons
-    const darkButton = document.getElementById("button-dark");
-    const lightButton = document.getElementById("button-light");
+    function setTheme(theme: string) {
+      const DARK_THEME = "dark";
+      const LIGHT_THEME = "light";
 
-    switch (theme) {
-      case "dark":
-        if (!document.documentElement.classList.contains("dark")) {
-          document.documentElement.classList.add("dark");
-        }
-        document.documentElement.classList.remove("light");
-        darkButton?.classList.add("hidden");
-        lightButton?.classList.remove("hidden");
-        break;
-      case "light":
-        if (!document.documentElement.classList.contains("light")) {
-          document.documentElement.classList.add("light");
-        }
-        document.documentElement.classList.remove("dark");
-        darkButton?.classList.remove("hidden");
-        lightButton?.classList.add("hidden");
-        break;
+      const darkButton = document.getElementById("button-dark");
+      const lightButton = document.getElementById("button-light");
+
+      switch (theme) {
+        case DARK_THEME:
+          if (!document.documentElement.classList.contains(DARK_THEME)) {
+            document.documentElement.classList.add(DARK_THEME);
+          }
+          document.documentElement.classList.remove(LIGHT_THEME);
+          darkButton?.classList.add("hidden");
+          lightButton?.classList.remove("hidden");
+          break;
+        case LIGHT_THEME:
+          if (!document.documentElement.classList.contains(LIGHT_THEME)) {
+            document.documentElement.classList.add(LIGHT_THEME);
+          }
+          document.documentElement.classList.remove(DARK_THEME);
+          darkButton?.classList.remove("hidden");
+          lightButton?.classList.add("hidden");
+          break;
+      }
     }
-  }
+  });
 </script>
