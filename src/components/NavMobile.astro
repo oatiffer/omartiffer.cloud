@@ -6,6 +6,7 @@ import CloseIcon from "../assets/icons/close.svg";
 <div
   id="nav-mobile"
   class="flex h-screen flex-col justify-between bg-base-200 md:hidden fixed z-50 left-full top-0 max-w-screen w-84 overflow-y-auto scrollbar-hide transition-transform duration-300"
+  transition:persist
 >
   <div class="px-4 py-6">
     <button
@@ -54,17 +55,26 @@ import CloseIcon from "../assets/icons/close.svg";
 </div>
 
 <script>
-  // Toggle mobile menu
-  const closeButton = document.querySelector("#close-button");
+  const navMobile = document.querySelector("#nav-mobile");
 
-  closeButton?.addEventListener("click", () => {
-    const container = document.querySelector("#global-container");
-    const navMobile = document.querySelector("#nav-mobile");
-
+  // Close the mobile menu after view transition
+  document.addEventListener("astro:after-swap", () => {
     navMobile?.classList.remove("-translate-x-full");
     navMobile?.classList.add("translate-x-full");
-    container?.classList.remove("blur");
-    container?.classList.remove("pointer-events-none");
-    document.documentElement.classList.remove("overflow-hidden");
+  });
+
+  // Re-attach the event listener after view transition
+  document.addEventListener("astro:page-load", () => {
+    // Toggle mobile menu
+    const closeButton = document.querySelector("#close-button");
+    const container = document.querySelector("#global-container");
+
+    closeButton?.addEventListener("click", () => {
+      navMobile?.classList.remove("-translate-x-full");
+      navMobile?.classList.add("translate-x-full");
+      container?.classList.remove("blur");
+      container?.classList.remove("pointer-events-none");
+      document.documentElement.classList.remove("overflow-hidden");
+    });
   });
 </script>
