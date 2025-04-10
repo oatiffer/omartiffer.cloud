@@ -17,8 +17,9 @@ const { pageTitle } = Astro.props;
 <!doctype html>
 <html
   lang="en"
-  class="font-sans bg-base-300 text-base-content scrollbar-hide"
-  transition:animate="none">
+  class="dark font-sans bg-base-300 text-base-content scrollbar-hide"
+  transition:animate="none"
+>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -31,7 +32,8 @@ const { pageTitle } = Astro.props;
     <MobileNav />
     <div
       id="global-container"
-      class="min-h-screen flex flex-col transition-all duration-300">
+      class="min-h-screen flex flex-col transition-all duration-300"
+    >
       <Header />
       <main class="transition-all duration-200">
         <slot />
