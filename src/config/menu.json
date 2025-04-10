@@ -6,19 +6,19 @@
     },
     {
       "name": "About",
-      "url": "/about"
+      "url": "/"
     },
     {
       "name": "Projects",
-      "url": "/projects"
+      "url": "/"
     },
     {
       "name": "Blog",
-      "url": "/blog"
+      "url": "/"
     },
     {
       "name": "Contact",
-      "url": "/contact"
+      "url": "/"
     }
   ]
 }

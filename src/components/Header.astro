@@ -1,7 +1,7 @@
 ---
 import { header } from "@config/menu.json";
 import HamburguerIcon from "@assets/icons/hamburguer.svg";
-import ThemeToggler from "@components/ThemeToggler/ThemeToggler.astro";
+import ThemeToggler from "@components/ThemeToggler.astro";
 ---
 
 <header class="bg-base-200" transition:persist>
@@ -55,4 +55,4 @@ import ThemeToggler from "@components/ThemeToggler/ThemeToggler.astro";
   </div>
 </header>
 
-<script src="./script.ts"></script>
+<script src="@scripts/components/header.ts"></script>

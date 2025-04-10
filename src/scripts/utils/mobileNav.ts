@@ -1,4 +1,3 @@
-
 const openMobileNav = () => {
   const mobileNav = document.getElementById("nav-mobile");
   const container = document.getElementById("global-container");
