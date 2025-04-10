@@ -5,8 +5,8 @@ import "@fontsource-variable/jetbrains-mono";
 import "@fontsource/fira-sans";
 import "@fontsource-variable/jost";
 
-import Header from "../components/Header.astro";
-import NavMobile from "../components/NavMobile.astro";
+import Header from "../components/Header/Header.astro";
+import MobileNav from "../components/MobileNav/MobileNav.astro";
 import Footer from "../components/Footer.astro";
 
 import { ClientRouter } from "astro:transitions";
@@ -18,8 +18,7 @@ const { pageTitle } = Astro.props;
 <html
   lang="en"
   class="font-sans bg-base-300 text-base-content scrollbar-hide"
-  transition:animate="none"
->
+  transition:animate="none">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -29,11 +28,10 @@ const { pageTitle } = Astro.props;
     <ClientRouter />
   </head>
   <body>
-    <NavMobile />
+    <MobileNav />
     <div
       id="global-container"
-      class="min-h-screen flex flex-col transition-all duration-300"
-    >
+      class="min-h-screen flex flex-col transition-all duration-300">
       <Header />
       <main class="transition-all duration-200">
         <slot />
@@ -46,21 +44,7 @@ const { pageTitle } = Astro.props;
 <script>
   // Re-apply theme after view transition
   document.addEventListener("astro:page-load", () => {
-    // Get system theme preference
-    const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
-      .matches
-      ? "dark"
-      : "light";
-
-    // Set the initial theme based on localStorage
-    const savedTheme = localStorage.getItem("theme");
-    if (!savedTheme) {
-      setTheme(systemTheme);
-    } else {
-      setTheme(savedTheme);
-    }
-
-    function setTheme(theme: string) {
+    const setTheme = (theme: string) => {
       const DARK_THEME = "dark";
       const LIGHT_THEME = "light";
 
@@ -85,6 +69,20 @@ const { pageTitle } = Astro.props;
           lightButton?.classList.add("hidden");
           break;
       }
+    };
+
+    // Get system theme preference
+    const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
+      .matches
+      ? "dark"
+      : "light";
+
+    // Set the initial theme based on localStorage
+    const savedTheme = localStorage.getItem("theme");
+    if (!savedTheme) {
+      setTheme(systemTheme);
+    } else {
+      setTheme(savedTheme);
     }
   });
 </script>

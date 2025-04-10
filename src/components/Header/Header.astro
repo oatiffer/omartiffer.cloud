@@ -1,7 +1,7 @@
 ---
-import { header } from "../config/menu.json";
-import ThemeSwitcher from "./ThemeSwitcher.astro";
-import HamburguerIcon from "../assets/icons/hamburguer.svg";
+import { header } from "../../config/menu.json";
+import ThemeToggler from "../ThemeToggler/ThemeToggler.astro";
+import HamburguerIcon from "../../assets/icons/hamburguer.svg";
 ---
 
 <header class="bg-base-200" transition:persist>
@@ -36,13 +36,12 @@ import HamburguerIcon from "../assets/icons/hamburguer.svg";
         </nav>
 
         <div class="flex items-center gap-4">
-          <ThemeSwitcher />
+          <ThemeToggler />
 
           <div class="block md:hidden">
             <button
               id="hamburguer-button"
-              class="rounded-sm group border border-primary p-2 text-secondary-content transition-colors ease hover:border-secondary cursor-pointer"
-            >
+              class="rounded-sm group border border-primary p-2 text-secondary-content transition-colors ease hover:border-secondary cursor-pointer">
               <HamburguerIcon
                 class="h-4 w-4 stroke-primary group-hover:stroke-secondary transition-colors ease"
               />
@@ -54,33 +53,4 @@ import HamburguerIcon from "../assets/icons/hamburguer.svg";
   </div>
 </header>
 
-<script>
-  const menuItems = document.querySelectorAll("#menu-item");
-  // const currentPath = window.location.pathname;
-
-  // Highlight the current menu item
-  // menuItems.forEach((item) => {
-  //   const itemPath = item.getAttribute("href");
-  //   if (currentPath === itemPath) {
-  //     item.classList.add("text-primary");
-  //   } else {
-  //     item.classList.remove("text-primary");
-  //   }
-  // });
-
-  // Re-attach the event listener after view transition
-  document.addEventListener("astro:page-load", () => {
-    // Toggle the mobile menu
-    const hamburguerButton = document.querySelector("#hamburguer-button");
-    const navMobile = document.querySelector("#nav-mobile");
-    const container = document.querySelector("#global-container");
-
-    hamburguerButton?.addEventListener("click", () => {
-      navMobile?.classList.remove("translate-x-full");
-      navMobile?.classList.add("-translate-x-full");
-      container?.classList.add("blur");
-      container?.classList.add("pointer-events-none");
-      document.documentElement.classList.add("overflow-hidden");
-    });
-  });
-</script>
+<script src="./script.ts"></script>
