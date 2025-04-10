@@ -1,5 +1,5 @@
 ---
-import { header } from "@config/menu.json";
+import HeaderNav from "@components/HeaderNav.astro";
 import HamburguerIcon from "@assets/icons/hamburguer.svg";
 import ThemeToggler from "@components/ThemeToggler.astro";
 ---
@@ -16,25 +16,7 @@ import ThemeToggler from "@components/ThemeToggler.astro";
       </div>
 
       <div class="md:flex md:items-center md:gap-12">
-        <nav aria-label="Global" class="hidden md:block">
-          <ul class="flex items-center gap-6 text-sm">
-            {
-              header.map((menuItem) => {
-                return (
-                  <li>
-                    <a
-                      id="menu-item"
-                      class="text-base-content text-lg hover:text-primary transition-colors duration-200"
-                      href="/"
-                    >
-                      {menuItem.name}
-                    </a>
-                  </li>
-                );
-              })
-            }
-          </ul>
-        </nav>
+        <HeaderNav />
 
         <div class="flex items-center gap-4">
           <ThemeToggler />
