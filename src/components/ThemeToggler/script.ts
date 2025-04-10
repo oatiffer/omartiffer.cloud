@@ -1,4 +1,4 @@
-import setTheme from "../../utils/theme.ts";
+import setTheme from "@utils/theme.ts";
 
 // Add event listeners to the buttons
 const themeButtons = document.querySelectorAll("[data-theme]");

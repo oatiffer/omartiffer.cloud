@@ -1,7 +1,8 @@
-const mobileNav = document.querySelector("#nav-mobile");
-const container = document.querySelector("#global-container");
 
 const openMobileNav = () => {
+  const mobileNav = document.getElementById("nav-mobile");
+  const container = document.getElementById("global-container");
+
   mobileNav?.classList.remove("translate-x-full");
   mobileNav?.classList.add("-translate-x-full");
   container?.classList.add("blur");
@@ -10,6 +11,9 @@ const openMobileNav = () => {
 };
 
 const closeMobileNav = () => {
+  const mobileNav = document.getElementById("nav-mobile");
+  const container = document.getElementById("global-container");
+
   mobileNav?.classList.remove("-translate-x-full");
   mobileNav?.classList.add("translate-x-full");
   container?.classList.remove("blur");

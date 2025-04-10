@@ -1,4 +1,4 @@
-import { closeMobileNav } from "../../utils/mobileNav";
+import { closeMobileNav } from "@utils/mobileNav";
 
 const closeButton = document.getElementById("close-button");
 

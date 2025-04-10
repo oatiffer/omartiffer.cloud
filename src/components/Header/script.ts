@@ -1,4 +1,4 @@
-import { openMobileNav } from "../../utils/mobileNav";
+import { openMobileNav } from "@utils/mobileNav";
 
 const menuItems = document.querySelectorAll("#menu-item");
 // const currentPath = window.location.pathname;
@@ -15,7 +15,7 @@ const menuItems = document.querySelectorAll("#menu-item");
 
 // Re-attach the event listener after view transition
 document.addEventListener("astro:page-load", () => {
-  const hamburguerButton = document.querySelector("#hamburguer-button");
+  const hamburguerButton = document.getElementById("hamburguer-button");
 
   hamburguerButton?.addEventListener("click", () => {
     openMobileNav();
