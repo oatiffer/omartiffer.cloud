@@ -1,21 +1,18 @@
 import { openMobileNav } from "@utils/mobileNav";
 
+const hamburguerButton = document.getElementById("hamburguer-button");
 const menuItems = document.querySelectorAll("#menu-item");
-// const currentPath = window.location.pathname;
-
-// Highlight the current menu item
-// menuItems.forEach((item) => {
-//   const itemPath = item.getAttribute("href");
-//   if (currentPath === itemPath) {
-//     item.classList.add("text-primary");
-//   } else {
-//     item.classList.remove("text-primary");
-//   }
-// });
 
 // Re-attach the event listener after view transition
 document.addEventListener("astro:page-load", () => {
-  const hamburguerButton = document.getElementById("hamburguer-button");
+
+  menuItems.forEach((item) => {
+    item.addEventListener("click", () => {
+      menuItems.forEach((i) => i.classList.remove("text-primary"));
+      item.classList.add("text-primary");
+    }
+    );
+  });
 
   hamburguerButton?.addEventListener("click", () => {
     openMobileNav();
