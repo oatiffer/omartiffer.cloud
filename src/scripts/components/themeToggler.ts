@@ -1,15 +1,30 @@
-import setTheme from "@scripts/utils/theme";
-
 document.addEventListener("astro:page-load", () => {
   // Add event listeners to the buttons
-  const themeButtons = document.querySelectorAll("[data-theme]");
+  const lightButton = document.getElementById(
+    "button-light"
+  ) as HTMLButtonElement;
+  const darkButton = document.getElementById(
+    "button-dark"
+  ) as HTMLButtonElement;
 
-  themeButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      const selectedTheme = button.getAttribute("data-theme") ?? "";
+  lightButton.addEventListener("click", () => {
+    toggleTheme("light");
+  });
+  darkButton.addEventListener("click", () => {
+    toggleTheme("dark");
+  });
 
-      setTheme(selectedTheme);
-      localStorage.setItem("theme", selectedTheme);
-    });
+  function toggleTheme(theme: string) {
+    document.dispatchEvent(
+      new CustomEvent("theme-toggle", { detail: { theme } })
+    );
+  }
+
+  document.addEventListener("theme-toggle", (event: Event) => {
+    const customEvent = event as CustomEvent;
+    const { theme } = customEvent.detail;
+
+    lightButton.hidden = theme === "light";
+    darkButton.hidden = theme === "dark";
   });
 });

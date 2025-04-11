@@ -2,7 +2,6 @@
 import Header from "@components/Header.astro";
 import MobileNav from "@components/MobileNav.astro";
 import Footer from "@components/Footer.astro";
-
 import MainHead from "@components/MainHead.astro";
 import { ClientRouter } from "astro:transitions";
 
@@ -10,10 +9,7 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html
-  lang="en"
-  class="dark font-sans bg-base-300 text-base-content scrollbar-hide"
->
+<html lang="en" class="font-sans bg-base-300 text-base-content scrollbar-hide">
   <head>
     <MainHead pageTitle={title} />
     <ClientRouter />

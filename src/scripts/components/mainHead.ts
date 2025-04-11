@@ -1,25 +1,43 @@
-import setTheme from "@scripts/utils/theme";
+["astro:page-load", "astro:after-swap"].forEach((event) => {
+    document.addEventListener(event, () => {
+        // Get system theme preference on load
+        const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
+            .matches
+            ? "dark"
+            : "light";
 
-const loadTheme = () => {
-    // Get system theme preference
-    const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
-        .matches
-        ? "dark"
-        : "light";
+        // Set the initial theme based on localStorage
+        const savedTheme = localStorage.getItem("theme");
+        const themeToSet = savedTheme || systemTheme;
 
-    // Set the initial theme based on localStorage
-    const savedTheme = localStorage.getItem("theme");
-    if (!savedTheme) {
-        setTheme(systemTheme);
-    } else {
-        setTheme(savedTheme);
-    }
-}
+        // Dispatch theme-toggle event to set initial toggler icon
+        setTimeout(() => {
+            document.dispatchEvent(
+                new CustomEvent("theme-toggle", {
+                    detail: { theme: themeToSet },
+                })
+            );
+        }, 0);
 
-document.addEventListener("astro:after-swap", () => {
-    loadTheme();
-});
+        // Set the initial theme
+        setTheme(themeToSet);
 
-document.addEventListener("astro:page-load", () => {
-    loadTheme();
+        // Listen for theme changes emitted by the theme toggler
+        document.addEventListener("theme-toggle", (event: Event) => {
+            const customEvent = event as CustomEvent;
+            const { theme } = customEvent.detail;
+
+            // Update the theme based on the event
+            setTheme(theme);
+        });
+
+        function setTheme(theme: string) {
+            // Set the theme in the document
+            document.documentElement.classList.toggle("dark", theme === "dark");
+            document.documentElement.classList.toggle("light", theme === "light");
+
+            // Persist the theme in localStorage
+            localStorage.setItem("theme", theme);
+        }
+    });
 });
