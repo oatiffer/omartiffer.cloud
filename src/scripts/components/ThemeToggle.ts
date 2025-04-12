@@ -19,12 +19,4 @@ document.addEventListener("astro:page-load", () => {
       new CustomEvent("theme-toggle", { detail: { theme } })
     );
   }
-
-  document.addEventListener("theme-toggle", (event: Event) => {
-    const customEvent = event as CustomEvent;
-    const { theme } = customEvent.detail;
-
-    lightButton.hidden = theme === "light";
-    darkButton.hidden = theme === "dark";
-  });
 });

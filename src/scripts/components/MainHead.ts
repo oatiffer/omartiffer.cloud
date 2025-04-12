@@ -10,15 +10,6 @@
         const savedTheme = localStorage.getItem("theme");
         const themeToSet = savedTheme || systemTheme;
 
-        // Dispatch theme-toggle event to set initial toggler icon
-        setTimeout(() => {
-            document.dispatchEvent(
-                new CustomEvent("theme-toggle", {
-                    detail: { theme: themeToSet },
-                })
-            );
-        }, 0);
-
         // Set the initial theme
         setTheme(themeToSet);
 

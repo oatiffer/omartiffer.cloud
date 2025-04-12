@@ -14,4 +14,27 @@ const { pageTitle } = Astro.props;
 <meta name="generator" content={Astro.generator} />
 <title>{pageTitle}</title>
 
-<script src="@scripts/components/mainHead.ts"></script>
+<script is:inline>
+  // Get system theme preference on load
+  const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+
+  // Set the initial theme based on localStorage
+  const savedTheme = localStorage.getItem("theme");
+  const themeToSet = savedTheme || systemTheme;
+
+  // Set the initial theme
+  setTheme(themeToSet);
+
+  function setTheme(theme) {
+    // Set the theme in the document
+    document.documentElement.classList.toggle("dark", theme === "dark");
+    document.documentElement.classList.toggle("light", theme === "light");
+
+    // Persist the theme in localStorage
+    localStorage.setItem("theme", theme);
+  }
+</script>
+
+<script src="@scripts/components/MainHead.ts"></script>

@@ -28,4 +28,19 @@ import LightIcon from "@assets/icons/lighttheme.svg";
   </button>
 </div>
 
-<script src="@scripts/components/themeToggler.ts"></script>
+<style>
+  :global(.dark) #button-dark {
+    display: none;
+  }
+  :global(.dark) #button-light {
+    display: block;
+  }
+  :global(.light) #button-dark {
+    display: block;
+  }
+  :global(.light) #button-light {
+    display: none;
+  }
+</style>
+
+<script src="@scripts/components/ThemeToggle.ts"></script>
