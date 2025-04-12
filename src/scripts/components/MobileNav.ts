@@ -6,14 +6,14 @@ document.addEventListener("astro:after-swap", () => {
   document.dispatchEvent(new CustomEvent("mobile-nav-open", { detail: { isOpen: false } }));
 });
 
-menuItems.forEach((item) => {
-  item.addEventListener("click", (event) => {
-    menuItems.forEach((i) => i.classList.remove("text-primary"));
+// menuItems.forEach((item) => {
+//   item.addEventListener("click", (event) => {
+//     menuItems.forEach((i) => i.classList.remove("text-primary"));
 
-    const target = event.target as HTMLElement;
-    target.classList.add("text-primary");
-  });
-});
+//     const target = event.target as HTMLElement;
+//     target.classList.add("text-primary");
+//   });
+// });
 
 closeButton.addEventListener("click", () => {
   document.dispatchEvent(new CustomEvent("mobile-nav-open", { detail: { isOpen: false } }));

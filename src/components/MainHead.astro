@@ -25,16 +25,11 @@ const { pageTitle } = Astro.props;
   const themeToSet = savedTheme || systemTheme;
 
   // Set the initial theme
-  setTheme(themeToSet);
+  document.documentElement.classList.toggle("dark", themeToSet === "dark");
+  document.documentElement.classList.toggle("light", themeToSet === "light");
 
-  function setTheme(theme) {
-    // Set the theme in the document
-    document.documentElement.classList.toggle("dark", theme === "dark");
-    document.documentElement.classList.toggle("light", theme === "light");
-
-    // Persist the theme in localStorage
-    localStorage.setItem("theme", theme);
-  }
+  // Persist the theme in localStorage
+  localStorage.setItem("theme", theme);
 </script>
 
 <script src="@scripts/components/MainHead.ts"></script>
