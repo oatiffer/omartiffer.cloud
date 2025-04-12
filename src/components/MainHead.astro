@@ -29,7 +29,7 @@ const { pageTitle } = Astro.props;
   document.documentElement.classList.toggle("light", themeToSet === "light");
 
   // Persist the theme in localStorage
-  localStorage.setItem("theme", theme);
+  localStorage.setItem("theme", themeToSet);
 </script>
 
 <script src="@scripts/components/MainHead.ts"></script>

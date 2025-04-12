@@ -1,4 +1,4 @@
-["astro:page-load", "astro:after-swap"].forEach((event) => {
+["astro:after-swap"].forEach((event) => {
     document.addEventListener(event, () => {
         // Get system theme preference on load
         const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
