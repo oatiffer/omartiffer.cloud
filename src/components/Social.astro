@@ -4,13 +4,13 @@ import socialIcons from "@config/social";
 
 <ul class="mt-4 flex items-center gap-8 sm:mt-6">
   {
-    socialIcons.map(({ Icon, fill, width, height, href }) => {
+    socialIcons.map(({ title, Icon, fill, width, height, href }) => {
       return (
         <li>
           <a href={href} target="_blank">
             <span>
               <Icon
-                class={`fill-${fill} hover:rotate-12 transition-transform duration-300 ease-in-out`}
+                class={`${title === "Gmail" ? "fill-[#EA4335]" : "fill-base-content "} hover:rotate-12 transition-transform duration-300 ease-in-out`}
                 width={width}
                 height={height}
               />
