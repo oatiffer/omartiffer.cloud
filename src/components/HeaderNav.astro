@@ -26,9 +26,11 @@ import { header } from "@config/menu.json";
   const menuItems = document.querySelectorAll("#menu-item");
 
   menuItems.forEach((item) => {
-    item.addEventListener("click", () => {
+    item.addEventListener("click", (event) => {
       menuItems.forEach((i) => i.classList.remove("text-primary"));
-      item.classList.add("text-primary");
+
+      const target = event.target as HTMLElement;
+      target.classList.add("text-primary");
     });
   });
 </script>
