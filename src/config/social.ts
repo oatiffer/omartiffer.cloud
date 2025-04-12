@@ -30,7 +30,7 @@ const socialIcons = [{
 {
     title: "Gmail",
     Icon: Gmail,
-    fill: "currentColor",
+    fill: "",
     width: 22,
     height: 22,
     url: "mailto:me@omartiffer.cloud"

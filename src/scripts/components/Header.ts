@@ -1,7 +1,5 @@
-import { openMobileNav } from "@scripts/utils/mobileNav";
+const hamburguerBtn = document.getElementById("hamburguer-button") as HTMLButtonElement;
 
-const hamburguerButton = document.getElementById("hamburguer-button");
-
-hamburguerButton?.addEventListener("click", () => {
-  openMobileNav();
+hamburguerBtn?.addEventListener("click", () => {
+  document.dispatchEvent(new CustomEvent("mobile-nav-open", { detail: { isOpen: true } }));
 });
