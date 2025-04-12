@@ -5,33 +5,31 @@ import ThemeToggler from "@components/ThemeToggle.astro";
 ---
 
 <header class="bg-base-200">
-  <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
-    <div class="flex h-16 items-center justify-between">
-      <div class="flex-1 md:flex md:items-center md:gap-12">
-        <a class="text-base-content hidden md:block" href="/">
-          <span class="w-auto font-[450] text-2xl"
-            >OmarTiffer<span class="text-primary text-xl">.cloud</span></span
-          >
-        </a>
-      </div>
+  <div
+    class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 flex h-16 items-center justify-between"
+  >
+    <div class="flex-1 md:flex md:items-center md:gap-12">
+      <a class="text-base-content hidden md:block" href="/">
+        <span class="w-auto font-[450] text-2xl"
+          >OmarTiffer<span class="text-primary text-xl">.cloud</span></span
+        >
+      </a>
+    </div>
 
-      <div class="md:flex md:items-center md:gap-12">
-        <HeaderNav />
+    <div class="md:flex md:items-center md:gap-12">
+      <HeaderNav />
 
-        <div class="flex items-center gap-4">
-          <ThemeToggler />
+      <div class="flex items-center gap-4">
+        <ThemeToggler />
 
-          <div class="block md:hidden">
-            <button
-              id="hamburguer-button"
-              class="rounded-sm group border border-primary p-2 text-secondary-content transition-colors ease hover:border-secondary cursor-pointer"
-            >
-              <HamburguerIcon
-                class="h-4 w-4 stroke-primary group-hover:stroke-secondary transition-colors ease"
-              />
-            </button>
-          </div>
-        </div>
+        <button
+          id="hamburguer-button"
+          class="block md:hidden rounded-sm group border border-primary p-2 text-secondary-content transition-colors ease hover:border-secondary cursor-pointer"
+        >
+          <HamburguerIcon
+            class="h-4 w-4 stroke-primary group-hover:stroke-secondary transition-colors ease"
+          />
+        </button>
       </div>
     </div>
   </div>
