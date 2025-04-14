@@ -2,29 +2,26 @@
 import { Image } from "astro:assets";
 import heroImage from "@assets/hero.png";
 import Social from "@components/Social.astro";
+
+const { greeting, title, subTitle, content } = Astro.props;
 ---
 
 <section class="lg:grid lg:place-content-center">
   <div
-    class="mx-auto w-screen max-w-screen-xl px-4 py-16 sm:px-6 sm:py-24 md:grid md:grid-cols-2 md:items-center md:gap-6 lg:px-8 lg:py-30"
+    class="h-[calc(100vh-64px)] mx-auto w-screen max-w-screen-xl px-4 py-32 sm:px-6 sm:py-40 md:grid md:grid-cols-2 md:items-center md:gap-6 lg:px-8 lg:py-30"
   >
     <div class="max-w-prose text-left">
-      <h3 class="text-primary text-xl">Hi there!</h3>
+      <h3 class="text-primary text-xl">{greeting}</h3>
       <h1 class="mt-4 text-4xl font-bold text-base-content sm:text-5xl">
-        I'm Omar Tiffer
+        {title}
       </h1>
       <h2 class="mt-4 text-primary text-2xl font-bold">
-        Cloud/DevOps Engineer
+        {subTitle}
       </h2>
       <p
         class="mt-4 text-base text-pretty text-base-content sm:text-lg/relaxed"
       >
-        I come from an on-prem world of servers, networking, and virtualization,
-        but these days I’m focused on cloud infrastructure. I’ve built a few
-        things on the front end and played around with backend code too. Right
-        now, I’m working toward my AWS Solutions Architect Associate cert and
-        progressively building skills in DevOps, like a good shell script, on
-        line at a time.
+        {content}
       </p>
 
       <Social />
