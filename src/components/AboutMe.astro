@@ -1,0 +1,39 @@
+---
+import { Image } from "astro:assets";
+import aboutPhoto from "@assets/me.png";
+
+const { title, content } = Astro.props;
+---
+
+<section
+  class="bg-base-300 py-32 mx-auto w-screen max-w-screen-xl px-4 sm:px-6 sm:py-40 lg:px-8 lg:py-30"
+>
+  <div class="flex items-center justify-center">
+    <div>
+      <h1 class="text-2xl font-bold text-base-content sm:text-4xl">
+        {title}
+      </h1>
+      <div class="mt-10 block shrink-0 bg-base-300 drop-shadow-2xl">
+        <Image
+          class="object-cover float-left mr-4 rounded-4xl"
+          src={aboutPhoto}
+          width={220}
+          height={220}
+          alt="Omar Tiffer photo"
+        />
+      </div>
+      <p class="pt-4 text-base text-base-content sm:text-lg">
+        {
+          content.split("\n").map((line: string) => (
+            <>
+              {line}
+              <>
+                <br />
+              </>
+            </>
+          ))
+        }
+      </p>
+    </div>
+  </div>
+</section>

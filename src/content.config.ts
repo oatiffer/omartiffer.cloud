@@ -14,6 +14,9 @@ export const pages = defineCollection({
         }),
         z.object({
             pageType: z.literal("about"),
+            pageTitle: z.string(),
+            title: z.string(),
+            content: z.string()
         })
     ])
 });

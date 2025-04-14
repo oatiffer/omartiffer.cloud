@@ -1,13 +1,13 @@
 ---
-import Hero from "@components/Hero.astro";
 import BaseLayout from "@layouts/BaseLayout.astro";
+import AboutMe from "@components/AboutMe.astro";
 import { getEntry, type CollectionEntry } from "astro:content";
 
 const { pageTitle, ...rest } = (
-  (await getEntry("pages", "home")) as CollectionEntry<"pages">
+  (await getEntry("pages", "about")) as CollectionEntry<"pages">
 ).data;
 ---
 
 <BaseLayout title={`Omar Tiffer | ${pageTitle}`}>
-  <Hero {...rest} />
+  <AboutMe {...rest} />
 </BaseLayout>
