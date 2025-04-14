@@ -8,32 +8,32 @@ const socialIcons = [
         title: "GitHub",
         Icon: GitHub,
         fill: "base-content",
-        width: 22,
-        height: 22,
+        width: 24,
+        height: 24,
         href: "https://github.com/oatiffer"
     },
     {
         title: "LinkedIn",
         Icon: LinkedIn,
         fill: "base-content",
-        width: 20,
-        height: 20,
+        width: 22,
+        height: 22,
         href: "https://www.linkedin.com/in/omartiffer/"
     },
     {
         title: "X",
         Icon: X,
         fill: "base-content",
-        width: 20,
-        height: 20,
+        width: 22,
+        height: 22,
         href: "https://x.com/omartiffer"
     },
     {
         title: "Gmail",
         Icon: Gmail,
         fill: "[#EA4335]",
-        width: 22,
-        height: 22,
+        width: 24,
+        height: 24,
         href: "mailto:me@omartiffer.cloud"
     }
 ];

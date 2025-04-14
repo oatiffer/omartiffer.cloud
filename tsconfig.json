@@ -19,6 +19,9 @@
       "@config/*": [
         "src/config/*"
       ],
+      "@content/*": [
+        "src/content"
+      ],
       "@layouts/*": [
         "src/layouts/*"
       ],
