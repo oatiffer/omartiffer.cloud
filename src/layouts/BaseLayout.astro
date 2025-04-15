@@ -48,7 +48,7 @@ const { title } = Astro.props;
     document.documentElement.classList.toggle("overflow-hidden", isOpen);
 
     const container = document.getElementById(
-      "global-container"
+      "global-container",
     ) as HTMLElement;
     container.classList.toggle("blur", isOpen);
     container.classList.toggle("pointer-events-none", isOpen);
