@@ -12,7 +12,8 @@ const { title, items }: ITimeline = Astro.props.journey;
 ---
 
 <section
-  class="text-lg text-base-content bg-base-300 pt-8 mx-auto w-screen max-w-screen-xl px-4 sm:px-6 lg:px-8 lg:pt-8"
+  id="timeline"
+  class="h-240 overflow-hidden text-lg text-base-content bg-base-300 pt-8 mx-auto w-screen max-w-screen-xl px-4 sm:px-6 lg:px-8 lg:pt-8 relative"
 >
   <h1
     class="text-2xl font-bold sm:text-4xl underline decoration-3 decoration-accent decoration-dotted underline-offset-8"
@@ -46,4 +47,49 @@ const { title, items }: ITimeline = Astro.props.journey;
       </div>
     ))
   }
+  <div
+    id="shadow"
+    class="absolute z-10 top-210 left-[50%] w-screen h-30 -translate-x-[50%] gradient pointer-events-none flex items-end justify-center transition-transform duration-200"
+  >
+    <button
+      id="read-more"
+      class="relative z-20 bg-primary rounded px-2 text-primary-content hover:bg-secondary text-base transition-colors duration-200 ease-in-out pointer-events-auto cursor-pointer"
+      >Read more</button
+    >
+  </div>
+  <div class="flex items-center justify-center">
+    <button
+      id="read-less"
+      class="bg-primary rounded px-2 text-primary-content hover:bg-secondary text-base transition-colors duration-200 ease-in-out pointer-events-auto cursor-pointer"
+      >Read less</button
+    >
+  </div>
 </section>
+
+<style>
+  .gradient {
+    background: linear-gradient(to top, rgb(11, 17, 33), transparent);
+  }
+</style>
+
+<script>
+  const shadowDiv = document.getElementById("shadow") as HTMLDivElement;
+  const readMoreBtn = document.getElementById("read-more") as HTMLButtonElement;
+  const readLessBtn = document.getElementById("read-less") as HTMLButtonElement;
+  const timelineSection = document.getElementById("timeline") as HTMLDivElement;
+
+  let sectionViewHeight: number;
+
+  readMoreBtn.addEventListener("click", () => {
+    const sectionScrollHeigt = timelineSection.scrollHeight;
+
+    sectionViewHeight = timelineSection.clientHeight;
+    timelineSection.style.height = `${sectionScrollHeigt}px`;
+    shadowDiv.style.visibility = "hidden";
+  });
+
+  readLessBtn.addEventListener("click", () => {
+    timelineSection.style.height = `${sectionViewHeight}px`;
+    shadowDiv.style.visibility = "visible";
+  });
+</script>
