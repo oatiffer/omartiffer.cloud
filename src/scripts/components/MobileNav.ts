@@ -1,9 +1,15 @@
 document.addEventListener("astro:page-load", () => {
-  const closeButton = document.getElementById("close-button") as HTMLButtonElement;
-  const menuItems = document.querySelectorAll("#menu-item") as NodeListOf<HTMLElement>;
+  const closeButton = document.getElementById(
+    "close-button",
+  ) as HTMLButtonElement;
+  const menuItems = document.querySelectorAll(
+    "#menu-item",
+  ) as NodeListOf<HTMLElement>;
 
   // Close the mobile menu after view transition
-  document.dispatchEvent(new CustomEvent("mobile-nav-open", { detail: { isOpen: false } }));
+  document.dispatchEvent(
+    new CustomEvent("mobile-nav-open", { detail: { isOpen: false } }),
+  );
 
   // menuItems.forEach((item) => {
   //   item.addEventListener("click", (event) => {
@@ -15,7 +21,9 @@ document.addEventListener("astro:page-load", () => {
   // });
 
   closeButton.addEventListener("click", () => {
-    document.dispatchEvent(new CustomEvent("mobile-nav-open", { detail: { isOpen: false } }));
+    document.dispatchEvent(
+      new CustomEvent("mobile-nav-open", { detail: { isOpen: false } }),
+    );
   });
 
   document.addEventListener("mobile-nav-open", (event) => {
@@ -27,10 +35,12 @@ document.addEventListener("astro:page-load", () => {
     mobileNav.classList.toggle("translate-x-full", isOpen === false);
   });
 
-  const mediaQuery = window.matchMedia('(min-width: 768px)');
-  mediaQuery.addEventListener('change', (e) => {
+  const mediaQuery = window.matchMedia("(min-width: 768px)");
+  mediaQuery.addEventListener("change", (e) => {
     if (e.matches) {
-      document.dispatchEvent(new CustomEvent("mobile-nav-open", { detail: { isOpen: false } }));
+      document.dispatchEvent(
+        new CustomEvent("mobile-nav-open", { detail: { isOpen: false } }),
+      );
     }
   });
 });

@@ -2,21 +2,38 @@ import { glob } from "astro/loaders";
 import { z, defineCollection } from "astro:content";
 
 export const pages = defineCollection({
-    loader: glob({ pattern: "**/*.{md,mdx}", base: "@content/pages" }),
-    schema: z.discriminatedUnion("pageType", [
-        z.object({
-            pageType: z.literal("home"),
-            pageTitle: z.string(),
-            greeting: z.string().optional(),
-            title: z.string(),
-            subTitle: z.string(),
-            content: z.string()
+  loader: glob({ pattern: "**/*.{md,mdx}", base: "@content/pages" }),
+  schema: z.object({
+    home: z
+      .object({
+        pageTitle: z.string(),
+        greeting: z.string().optional(),
+        title: z.string(),
+        subTitle: z.string(),
+        content: z.string(),
+      })
+      .optional(),
+    about: z
+      .object({
+        pageTitle: z.string(),
+        journey: z.object({
+          title: z.string(),
+          content: z.string(),
         }),
-        z.object({
-            pageType: z.literal("about"),
-            pageTitle: z.string(),
-            title: z.string(),
-            content: z.string()
-        })
-    ])
+        timeline: z.object({
+          title: z.string(),
+          items: z.array(
+            z.object({
+              date: z.string(),
+              role: z.string(),
+              summary: z.string(),
+              stack: z.array(
+                z.string(),
+              ),
+            }),
+          ),
+        }),
+      })
+      .optional(),
+  }),
 });

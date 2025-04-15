@@ -1,0 +1,49 @@
+---
+interface ITimeline {
+  title: string;
+  items: {
+    date: string;
+    role: string;
+    summary: string;
+    stack: string[];
+  }[];
+}
+const { title, items }: ITimeline = Astro.props.journey;
+---
+
+<section
+  class="text-lg text-base-content bg-base-300 pt-24 mx-auto w-screen max-w-screen-xl px-4 sm:px-6 sm:pt-40 lg:px-8 lg:pt-8"
+>
+  <h1
+    class="text-2xl font-bold sm:text-4xl underline decoration-3 decoration-accent decoration-dotted underline-offset-8"
+  >
+    {title}
+  </h1>
+  {
+    items.map((item) => (
+      <div class="ps-2 my-2 mt-14 not-first-of-type:mt-0 flex gap-x-3">
+        <h3 class="font-medium uppercase min-w-26 text-primary">{item.date}</h3>
+        <div class="flex gap-x-3">
+          <div class="relative last:after:hidden after:absolute after:top-7 after:bottom-0 after:start-3.5 after:w-px after:-translate-x-[0.5px] after:bg-base-content">
+            <div class="relative z-10 size-7 flex justify-center items-center">
+              <div class="size-2 rounded-full bg-accent" />
+            </div>
+          </div>
+
+          <div class="grow pb-8">
+            <h3 class="flex gap-x-2 font-semibold">{item.role}</h3>
+            <p class="mt-1">{item.summary}</p>
+            <ul class="flex items-center gap-x-2 mt-4">
+              {item.stack &&
+                item.stack.map((tech) => (
+                  <li class=" bg-secondary/40 rounded-lg px-2 text-base">
+                    {tech}
+                  </li>
+                ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    ))
+  }
+</section>

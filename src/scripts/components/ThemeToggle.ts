@@ -1,10 +1,10 @@
 document.addEventListener("astro:page-load", () => {
   // Add event listeners to the buttons
   const lightButton = document.getElementById(
-    "button-light"
+    "button-light",
   ) as HTMLButtonElement;
   const darkButton = document.getElementById(
-    "button-dark"
+    "button-dark",
   ) as HTMLButtonElement;
 
   lightButton.addEventListener("click", () => {
@@ -16,7 +16,7 @@ document.addEventListener("astro:page-load", () => {
 
   function toggleTheme(theme: string) {
     document.dispatchEvent(
-      new CustomEvent("theme-toggle", { detail: { theme } })
+      new CustomEvent("theme-toggle", { detail: { theme } }),
     );
   }
 });

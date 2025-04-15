@@ -1,13 +1,14 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
-import AboutMe from "@components/AboutMe.astro";
+import AboutIntro from "@components/AboutIntro.astro";
+import AboutJourney from "@components/AboutJourney.astro";
 import { getEntry, type CollectionEntry } from "astro:content";
 
-const { pageTitle, ...rest } = (
-  (await getEntry("pages", "about")) as CollectionEntry<"pages">
-).data;
+const { data } = (await getEntry("pages", "about")) as CollectionEntry<"pages">;
+const { intro, journey } = data.about;
 ---
 
-<BaseLayout title={`Omar Tiffer | ${pageTitle}`}>
-  <AboutMe {...rest} />
+<BaseLayout title={`Omar Tiffer | ${data.pageTitle}`}>
+  <AboutIntro intro={intro} />
+  <AboutJourney journey={journey} />
 </BaseLayout>
