@@ -70,49 +70,49 @@ about:
     title: "The certs"
     items:
       - name: "AWS Certified Solutions Architect – Associate"
-        src: "/certs/aws.png"
+        src: "/certs/aws-saa.png"
         link: ""
         valid: false
         inProgress: true
         status: "In progress"
       - name: "Microsoft Certified: Azure Fundamentals"
-        src: "/certs/azure.png"
+        src: "/certs/azure-fundamentals.png"
         link: "https://www.credly.com/badges/a41b8bc2-9679-4acf-ad5d-0ba231b56041/public_url"
         valid: true
         inProgress: false
         status: "Current"
       - name: "VMware Certified Professional – Data Center Virtualization"
-        src: "/certs/vmware.png"
+        src: "/certs/vmware-vcp.png"
         link: "https://www.credly.com/badges/eea2bcfd-c210-4fe0-bb0a-d42c6d3856c7/public_url"
         valid: true
         inProgress: false
         status: "Current"
       - name: "CompTIA Network Infrastructure Professional"
-        src: "/certs/cnip.png"
+        src: "/certs/comptia-cnip.png"
         link: "https://www.credly.com/badges/3ddf688b-a0ae-4ec6-bdea-7db65172fdc0/public_url"
         valid: false
         inProgress: false
         status: "Expired"
       - name: "PCEP - Certified Entry-Level Python Programmer"
-        src: "/certs/python.png"
+        src: "/certs/python-pcep.png"
         link: "https://www.credly.com/badges/4cb506e6-b896-4c51-af3d-f8cd9349e001/public_url"
         valid: true
         inProgress: false
         status: "Current"
       - name: "CompTIA Server+"
-        src: "/certs/serverplus.png"
+        src: "/certs/comptia-serverplus.png"
         link: "https://www.credly.com/badges/9bf7d681-4444-4c8b-8a43-49d3b6b5d781/public_url"
         valid: true
         inProgress: false
         status: "Current"
       - name: "CompTIA Network+"
-        src: "/certs/netplus.png"
+        src: "/certs/comptia-netplus.png"
         link: "https://www.credly.com/badges/a78e7244-9ddd-49ee-a5d2-38cb0e695723/public_url"
         valid: false
         inProgress: false
         status: "Expired"
       - name: "F5 Certified Administrator, BIG-IP"
-        src: "/certs/f5.png"
+        src: "/certs/f5-bigip.png"
         link: "https://www.credly.com/badges/d39200e3-1f06-4b3a-b902-92a40a74e727/public_url"
         valid: false
         inProgress: false
