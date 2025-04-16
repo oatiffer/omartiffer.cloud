@@ -1,6 +1,5 @@
 ---
 home:
-  pageType: "home"
   pageTitle: "Home"
   greeting: "Hi there!"
   title: "I'm Omar Tiffer"
