@@ -1,8 +1,5 @@
 ---
-import { Image } from "astro:assets";
-import aboutPhoto from "@assets/me.png";
-
-const { intro } = Astro.props;
+const { title, image, content } = Astro.props.intro;
 ---
 
 <section
@@ -11,12 +8,12 @@ const { intro } = Astro.props;
   <div class="flex items-center justify-center">
     <div>
       <h1 class="text-2xl font-bold text-base-content sm:text-4xl underline">
-        {intro.title}
+        {title}
       </h1>
       <div class="mt-14 block shrink-0 bg-base-300 drop-shadow-2xl">
-        <Image
+        <img
           class="object-cover float-left mr-4 rounded-4xl"
-          src={aboutPhoto}
+          src={image}
           width={220}
           height={220}
           alt="Omar Tiffer photo"
@@ -24,7 +21,7 @@ const { intro } = Astro.props;
       </div>
       <p class="pt-4 text-base text-base-content sm:text-lg">
         {
-          intro.content.split("\n").map((line: string) => (
+          content.split("\n").map((line: string) => (
             <>
               {line}
               <b>
