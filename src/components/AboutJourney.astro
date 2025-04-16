@@ -15,15 +15,15 @@ const { title, items }: ITimeline = Astro.props.journey;
   id="timeline"
   class="h-240 overflow-hidden text-lg text-base-content bg-base-300 pt-8 mx-auto w-screen max-w-screen-xl px-4 sm:px-6 lg:px-8 lg:pt-8 relative transition-[height] duration-300 ease-in-out"
 >
-  <h1
-    class="text-2xl font-bold sm:text-4xl underline decoration-3 decoration-accent decoration-dotted underline-offset-8"
-  >
+  <h1 class="text-2xl font-bold sm:text-4xl underline">
     {title}
   </h1>
   {
     items.map((item) => (
       <div class="ps-2 my-2 mt-14 not-first-of-type:mt-0 flex flex-col md:flex-row md:gap-x-3">
-        <h3 class="font-medium uppercase min-w-26 text-primary">{item.date}</h3>
+        <h3 class="font-medium uppercase min-w-26 text-base-content">
+          {item.date}
+        </h3>
         <div class="flex gap-x-3">
           <div class="relative last:after:hidden after:absolute after:top-7 after:bottom-0 after:start-3.5 after:w-px after:-translate-x-[0.5px] after:bg-base-content">
             <div class="relative z-10 size-7 flex justify-center items-center">
@@ -32,12 +32,12 @@ const { title, items }: ITimeline = Astro.props.journey;
           </div>
 
           <div class="grow pb-8">
-            <h3 class="font-semibold">{item.role}</h3>
+            <h3 class="font-semibold text-primary">{item.role}</h3>
             <p class="mt-1 w-auto">{item.summary}</p>
             <ul class="flex flex-wrap items-center gap-2 mt-4">
               {item.stack &&
                 item.stack.map((tech) => (
-                  <li class=" bg-secondary/40 rounded-lg px-2 text-base">
+                  <li class="bg-secondary/40 rounded-lg px-2 py-0.5 text-base">
                     {tech}
                   </li>
                 ))}
@@ -53,7 +53,7 @@ const { title, items }: ITimeline = Astro.props.journey;
   >
     <button
       id="read-more"
-      class="relative z-20 bg-primary rounded px-2 text-primary-content hover:bg-secondary text-base transition-colors duration-200 ease-in-out pointer-events-auto cursor-pointer"
+      class="relative z-20 bg-primary/80 rounded px-2 text-primary-content hover:bg-secondary text-base transition-colors duration-200 ease-in-out pointer-events-auto cursor-pointer"
       >Read more</button
     >
   </div>

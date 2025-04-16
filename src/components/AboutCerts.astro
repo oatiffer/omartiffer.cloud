@@ -1,0 +1,67 @@
+---
+import Credly from "@assets/icons/credly.svg";
+
+interface ICert {
+  title: string;
+  items: {
+    name: string;
+    src: string;
+    link: string;
+    valid: boolean;
+    inProgress: boolean;
+    status: string;
+  }[];
+}
+
+const { title, items }: ICert = Astro.props.certs;
+---
+
+<section
+  class="text-lg text-base-content bg-base-300 pt-24 pb-24 mx-auto w-screen max-w-screen-xl px-4 sm:px-6 lg:px-8 lg:pt-24"
+>
+  <h1 class="text-2xl font-bold sm:text-4xl underline">
+    {title}
+  </h1>
+  <p class="mt-12">
+    These are some of the certifications I’ve picked up along the way. A few are
+    still current, others have expired, and some I’m working on now — but all of
+    them reflect parts of the journey and the areas I’ve spent time learning and
+    working in.
+  </p>
+  <ul class="flex flex-wrap justify-center mt-12 gap-y-12">
+    {
+      items.map((cert) => (
+        <li class="flex justify-center sm:w-1/2 md:w-1/4">
+          <a
+            href={cert.link ? cert.link : null}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="flex flex-col w-40 h-50 gap-y-2 items-center justify-between cursor-pointer group hover:scale-110 transition-transform duration-200 ">
+              <img src={cert.src} height={100} width={100} alt={cert.name} />
+              <p class="text-center text-sm font-medium">{cert.name}</p>
+              <p
+                class={`text-sm rounded-lg px-2 py-0.5 ${cert.inProgress ? "bg-warning/70 text-warning-content" : cert.valid ? "bg-success/70 text-success-content" : "bg-error/70 text-error-content"}`}
+              >
+                {cert.status}
+              </p>
+            </div>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+  <p class="flex justify-center items-center mt-18 text-md font-medium">
+    Check out the full list on
+    <a
+      href="https://www.credly.com/users/omartiffer"
+      class="ml-1.5 pt-1.5 flex items-center"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <span>
+        <Credly width={48} />
+      </span>
+    </a>
+  </p>
+</section>

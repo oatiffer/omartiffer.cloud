@@ -27,9 +27,20 @@ export const pages = defineCollection({
               date: z.string(),
               role: z.string(),
               summary: z.string(),
-              stack: z.array(
-                z.string(),
-              ),
+              stack: z.array(z.string()),
+            }),
+          ),
+        }),
+        certs: z.object({
+          title: z.string(),
+          items: z.array(
+            z.object({
+              name: z.string(),
+              src: z.string(),
+              link: z.string(),
+              valid: z.boolean(),
+              inPrgress: z.boolean(),
+              status: z.string(),
             }),
           ),
         }),
