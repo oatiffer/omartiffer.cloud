@@ -16,8 +16,9 @@ export const pages = defineCollection({
     about: z
       .object({
         pageTitle: z.string(),
-        journey: z.object({
+        intro: z.object({
           title: z.string(),
+          image: z.string(),
           content: z.string(),
         }),
         timeline: z.object({
