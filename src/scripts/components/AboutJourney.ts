@@ -19,9 +19,15 @@ document.addEventListener("astro:page-load", () => {
 
   readLessBtn &&
     readLessBtn.addEventListener("click", () => {
+      window.scrollTo({
+        top: timeline.offsetTop,
+        behavior: "smooth",
+      });
+
       timeline.style.height = `${collapsedHeight}px`;
       shadow.style.visibility = "visible";
       isExpanded = false;
+
     });
 
   window.addEventListener("resize", () => {
