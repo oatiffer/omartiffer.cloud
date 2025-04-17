@@ -5,6 +5,7 @@ document.addEventListener("astro:page-load", () => {
   const timeline = document.getElementById("timeline") as HTMLDivElement;
 
   let collapsedHeight: number;
+  let isExpanded = false;
 
   readMoreBtn &&
     readMoreBtn.addEventListener("click", () => {
@@ -13,11 +14,19 @@ document.addEventListener("astro:page-load", () => {
       const expandedHeight = timeline.scrollHeight;
       timeline.style.height = `${expandedHeight}px`;
       shadow.style.visibility = "hidden";
+      isExpanded = true;
     });
 
   readLessBtn &&
     readLessBtn.addEventListener("click", () => {
       timeline.style.height = `${collapsedHeight}px`;
       shadow.style.visibility = "visible";
+      isExpanded = false;
     });
+
+  window.addEventListener("resize", () => {
+    if (isExpanded) {
+      timeline.style.height = "auto";
+    }
+  });
 });

@@ -25,7 +25,7 @@ const { closing } = Astro.props as IClosing;
 
           <ul class="w-auto text-base-content mt-8 md:block">
             {item.bullets.map((bullet) => (
-              <li class="relative before:w-1 before:h-1 before:rounded-full before:bg-primary before:absolute before:-translate-x-4 before:translate-y-3">
+              <li class="relative pl-4 before:w-1 before:h-1 before:rounded-full before:bg-primary before:absolute before:-translate-x-4 before:translate-y-3">
                 {bullet}
               </li>
             ))}
@@ -43,6 +43,8 @@ const { closing } = Astro.props as IClosing;
         class="text-secondary hover:text-primary">drop me a line</a
       > or connect via the links below.
     </p>
-    <Social fill={"fill-neutral-content"} icons={socialIcons.about} />
+    <div class="mt-4">
+      <Social fill={"fill-neutral-content"} icons={socialIcons.about} />
+    </div>
   </div>
 </section>

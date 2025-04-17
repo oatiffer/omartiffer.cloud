@@ -4,7 +4,7 @@ import X from "@assets/icons/x.svg";
 import Gmail from "@assets/icons/gmail.svg";
 
 const socialIcons = {
-  hero: [
+  main: [
     {
       title: "GitHub",
       Icon: GitHub,

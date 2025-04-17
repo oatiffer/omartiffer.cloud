@@ -13,7 +13,7 @@ interface Icons {
 const { fill, icons } = Astro.props as Icons;
 ---
 
-<ul class="mt-4 flex items-center gap-8 sm:mt-6">
+<ul class="flex items-center gap-8">
   {
     icons.map(({ title, Icon, width, height, href }) => {
       return (

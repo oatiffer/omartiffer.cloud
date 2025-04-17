@@ -7,7 +7,7 @@ const { greeting, title, subTitle, content, cta, link, connect } = Astro.props;
 
 <section class="lg:grid lg:place-content-center">
   <div
-    class="h-[calc(100vh-96px)] mx-auto w-screen max-w-screen-xl px-4 py-32 sm:px-6 sm:py-40 lg:grid lg:grid-cols-2 lg:items-center lg:gap-6 lg:px-8 lg:py-30"
+    class="h-[calc(100vh-160px)] mx-auto w-screen max-w-screen-xl px-4 sm:px-6 lg:grid lg:grid-cols-2 lg:items-center lg:gap-6 lg:px-8"
   >
     <div class="max-w-prose text-left md:max-w-full">
       <h3 class="text-primary text-xl">{greeting}</h3>
@@ -28,7 +28,9 @@ const { greeting, title, subTitle, content, cta, link, connect } = Astro.props;
           class="text-primary hover:text-secondary cursor-pointer">{link}</a
         >{connect}
       </p>
-      <Social fill={"fill-base-content"} icons={socialIcons.hero} />
+      <div class="mt-4 sm:mt-6">
+        <Social fill={"fill-base-content"} icons={socialIcons.main} />
+      </div>
     </div>
 
     <div class="x-auto hidden lg:flex">

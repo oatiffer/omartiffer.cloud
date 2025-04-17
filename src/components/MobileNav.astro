@@ -1,11 +1,13 @@
 ---
 import { header } from "@config/menu.json";
 import CloseIcon from "@assets/icons/close.svg";
+import Social from "./Social.astro";
+import socialIcons from "@config/social";
 ---
 
 <div
   id="nav-mobile"
-  class="scrollbar-hide bg-base-200 fixed top-0 left-full z-50 flex h-screen w-84 max-w-screen flex-col justify-between overflow-y-auto transition-transform duration-300 md:hidden"
+  class="scrollbar-hide bg-base-200 shadow-xl fixed top-0 left-full z-50 flex h-screen w-84 max-w-screen flex-col justify-between transition-transform duration-300 md:hidden"
 >
   <div class="px-4 py-6">
     <button
@@ -36,23 +38,11 @@ import CloseIcon from "@assets/icons/close.svg";
     </ul>
   </div>
 
-  <!-- <div class="sticky inset-x-0 bottom-0 bg-base-300">
-    <a href="#" class="flex items-center gap-2 p-4">
-      <img
-        alt=""
-        src="https://images.unsplash.com/photo-1600486913747-55e5470d6f40?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-        class="size-10 rounded-full object-cover"
-      />
-
-      <div>
-        <p class="text-xs">
-          <strong class="block font-medium">Eric Frusciante</strong>
-
-          <span> eric@frusciante.com </span>
-        </p>
-      </div>
-    </a>
-  </div> -->
+  <div
+    class="h-20 sticky flex items-center justify-center inset-x-0 bottom-0 bg-base-300"
+  >
+    <Social fill={"fill-base-content"} icons={socialIcons.main} />
+  </div>
 </div>
 
 <script src="@scripts/components/MobileNav.ts"></script>
