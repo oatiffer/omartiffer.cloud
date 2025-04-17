@@ -1,6 +1,4 @@
 ---
-import { Image } from "astro:assets";
-import heroImage from "@assets/hero.png";
 import Social from "@components/Social.astro";
 
 const { greeting, title, subTitle, content } = Astro.props;
@@ -8,9 +6,9 @@ const { greeting, title, subTitle, content } = Astro.props;
 
 <section class="lg:grid lg:place-content-center">
   <div
-    class="h-[calc(100vh-64px)] mx-auto w-screen max-w-screen-xl px-4 py-32 sm:px-6 sm:py-40 md:grid md:grid-cols-2 md:items-center md:gap-6 lg:px-8 lg:py-30"
+    class="h-[calc(100vh-64px)] mx-auto w-screen max-w-screen-xl px-4 py-32 sm:px-6 sm:py-40 lg:grid lg:grid-cols-2 lg:items-center lg:gap-6 lg:px-8 lg:py-30"
   >
-    <div class="max-w-prose text-left">
+    <div class="max-w-prose text-left md:max-w-full">
       <h3 class="text-primary text-xl">{greeting}</h3>
       <h1 class="mt-4 text-4xl font-bold text-base-content sm:text-5xl">
         {title}
@@ -23,18 +21,19 @@ const { greeting, title, subTitle, content } = Astro.props;
       >
         {content}
       </p>
-
+      <p class="mt-4 text-lg">
+        Want the full story? Read more <a
+          href="/about"
+          class="text-primary hover:text-secondary cursor-pointer"
+          >about my journey</a
+        >. And if you'd like to connect or say hi, feel free to reach out
+        through the links below.
+      </p>
       <Social />
     </div>
 
-    <div class="x-auto flex justify-center">
-      <Image
-        class="x-auto hidden max-w-md md:block"
-        src={heroImage}
-        alt="Hero Image"
-        loading="lazy"
-        decoding="async"
-      />
+    <div class="x-auto hidden lg:flex">
+      <img class="x-auto" src="/hero.png" alt="Hero Image" />
     </div>
   </div>
 </section>

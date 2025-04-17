@@ -10,9 +10,9 @@ const { title, image, content } = Astro.props.intro;
       <h1 class="text-2xl font-bold text-base-content sm:text-4xl underline">
         {title}
       </h1>
-      <div class="mt-14 block shrink-0 bg-base-300 drop-shadow-2xl">
+      <div class="mt-14 block shrink-0 bg-base-300">
         <img
-          class="object-cover float-left mr-4 rounded-4xl"
+          class="object-fit float-left mr-4 rounded-4xl shadow-xl"
           src={image}
           width={220}
           height={220}
