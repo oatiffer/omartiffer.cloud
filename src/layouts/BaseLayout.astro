@@ -18,7 +18,7 @@ const { title } = Astro.props;
     <MobileNav />
     <div
       id="global-container"
-      class="h-screen flex flex-col transition-all duration-300"
+      class="flex flex-col transition-all duration-300"
     >
       <Header />
       <main class="transition-all duration-200">
@@ -48,7 +48,7 @@ const { title } = Astro.props;
     document.documentElement.classList.toggle("overflow-hidden", isOpen);
 
     const container = document.getElementById(
-      "global-container",
+      "global-container"
     ) as HTMLElement;
     container.classList.toggle("blur", isOpen);
     container.classList.toggle("pointer-events-none", isOpen);

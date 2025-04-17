@@ -1,5 +1,6 @@
 ---
 interface Icons {
+  fill: string;
   icons: {
     title: string;
     Icon: any;
@@ -9,7 +10,7 @@ interface Icons {
   }[];
 }
 
-const { icons } = Astro.props as Icons;
+const { fill, icons } = Astro.props as Icons;
 ---
 
 <ul class="mt-4 flex items-center gap-8 sm:mt-6">
@@ -20,7 +21,7 @@ const { icons } = Astro.props as Icons;
           <a href={href} target="_blank" rel="noopener noreferrer">
             <span>
               <Icon
-                class={`${title === "Gmail" ? "fill-[#EA4335]" : "fill-base-content "} hover:rotate-12 transition-transform duration-300 ease-in-out`}
+                class={`${title === "Gmail" ? "fill-[#EA4335]" : fill} hover:rotate-12 transition-transform duration-300 ease-in-out`}
                 width={width}
                 height={height}
               />

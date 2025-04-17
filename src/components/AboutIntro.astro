@@ -4,7 +4,7 @@ const { title, image, content } = Astro.props.intro;
 
 <section class="bg-base-300">
   <div
-    class="mx-auto w-screen max-w-screen-xl flex items-center justify-center pt-38 px-4 pb-24 sm:px-6 sm:pt-40 lg:px-8 lg:pt-38"
+    class="mx-auto w-screen max-w-screen-xl flex items-center justify-center pt-38 px-4 pb-20 sm:px-6 lg:px-8"
   >
     <div>
       <h1
@@ -12,13 +12,13 @@ const { title, image, content } = Astro.props.intro;
       >
         {title}
       </h1>
-      <div class="mt-14 block shrink-0 bg-base-300">
+      <div class="flex justify-center mt-14 sm:block shrink-0 bg-base-300">
         <img
-          class="object-fit float-left mr-4 rounded-4xl shadow-xl"
+          class="object-fit sm:float-left mr-4 rounded-4xl shadow-xl"
           src={image}
           width={220}
           height={220}
-          alt="Omar Tiffer photo"
+          alt="Omar Tiffer Photo"
         />
       </div>
       <p class="pt-4 text-base text-base-content sm:text-lg">
