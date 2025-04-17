@@ -12,9 +12,9 @@ interface IClosing {
 const { closing } = Astro.props as IClosing;
 ---
 
-<section class="bg-base-300 text-lg leading-relaxed text-base-content">
+<section class="w-full bg-base-300 text-lg leading-relaxed text-base-content">
   <div
-    class="mx-auto w-screen max-w-screen-xl flex flex-col gap-y-12 gap-x-8 pt-24 pb-24 px-4 sm:px-6 md:flex-row lg:px-8 lg:pt-24"
+    class="mx-auto max-w-screen-xl flex flex-col gap-y-12 gap-x-8 pt-24 pb-24 px-4 sm:px-6 md:flex-row lg:px-8 lg:pt-24"
   >
     {
       closing.map((item) => (

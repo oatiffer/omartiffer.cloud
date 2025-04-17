@@ -5,9 +5,9 @@ import socialIcons from "@config/social.ts";
 const { greeting, title, subTitle, content, cta, link, connect } = Astro.props;
 ---
 
-<section class="lg:grid lg:place-content-center">
+<section class="w-full">
   <div
-    class="h-[calc(100vh-160px)] mx-auto w-screen max-w-screen-xl px-4 sm:px-6 lg:grid lg:grid-cols-2 lg:items-center lg:gap-6 lg:px-8"
+    class="h-max mx-auto w-screen max-w-screen-xl px-4 py-16 sm:px-6 lg:grid lg:grid-cols-2 lg:items-center lg:gap-6 lg:px-8 lg:py-0"
   >
     <div class="max-w-prose text-left md:max-w-full">
       <h3 class="text-primary text-xl">{greeting}</h3>
