@@ -12,9 +12,9 @@ const { title } = Astro.props;
 <html lang="en" class="font-sans bg-base-300 text-base-content scrollbar-hide">
   <head>
     <MainHead pageTitle={title} />
+    <ClientRouter />
   </head>
   <body>
-    <MobileNav />
     <div id="global-container" class="transition-all duration-300">
       <Header />
       <main
@@ -24,7 +24,7 @@ const { title } = Astro.props;
       </main>
       <Footer />
     </div>
-    <ClientRouter />
+    <MobileNav />
   </body>
 </html>
 
