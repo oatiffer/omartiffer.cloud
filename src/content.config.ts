@@ -11,6 +11,9 @@ export const pages = defineCollection({
         title: z.string(),
         subTitle: z.string(),
         content: z.string(),
+        cta: z.string(),
+        link: z.string(),
+        connect: z.string(),
       })
       .optional(),
     about: z
@@ -32,6 +35,13 @@ export const pages = defineCollection({
             }),
           ),
         }),
+        cta: z.array(
+          z.object({
+            title: z.string(),
+            description: z.string(),
+            button: z.string(),
+          }),
+        ),
         certs: z.object({
           title: z.string(),
           items: z.array(

@@ -4,14 +4,16 @@ import AboutIntro from "@components/AboutIntro.astro";
 import AboutJourney from "@components/AboutJourney.astro";
 import { getEntry, type CollectionEntry } from "astro:content";
 import AboutCerts from "@components/AboutCerts.astro";
+import AboutCTA from "@components/AboutCTA.astro";
 
 const {
-  about: { pageTitle, intro, journey, certs },
+  about: { pageTitle, intro, journey, cta, certs },
 } = ((await getEntry("pages", "about")) as CollectionEntry<"pages">).data;
 ---
 
 <BaseLayout title={`Omar Tiffer | ${pageTitle}`}>
   <AboutIntro intro={intro} />
   <AboutJourney journey={journey} />
+  <AboutCTA cta={cta} />
   <AboutCerts certs={certs} />
 </BaseLayout>

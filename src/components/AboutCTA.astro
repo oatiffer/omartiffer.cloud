@@ -1,0 +1,41 @@
+---
+interface ICta {
+  cta: {
+    title: string;
+    description: string;
+    button: string;
+  }[];
+}
+
+const { cta } = Astro.props as ICta;
+---
+
+<div class="h-24 bg-base-200"></div>
+<section class="bg-neutral text-lg leading-relaxed text-base-content">
+  <div
+    class="mx-auto w-screen max-w-screen-xl flex flex-col gap-y-12 gap-x-8 pt-24 pb-24 px-4 sm:px-6 md:flex-row lg:px-8 lg:pt-24"
+  >
+    {
+      cta.map((item) => (
+        <div class="text-center ltr:sm:text-left rtl:sm:text-right">
+          <h2 class="w-auto text-2xl text-neutral-content font-bold underline md:text-3xl">
+            {item.title}
+          </h2>
+
+          <p class="w-auto text-neutral-content mt-8 md:block">
+            {item.description}
+          </p>
+
+          <div class="mt-4 md:mt-8">
+            <a
+              href="#Projects"
+              class="inline-block rounded-sm bg-secondary px-8 py-3 text-sm text-secondary-content font-medium transition hover:bg-secondary/80 focus:ring-1 focus:ring-accent focus:outline-hidden"
+            >
+              {item.button}
+            </a>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</section>

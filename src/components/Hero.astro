@@ -1,7 +1,7 @@
 ---
 import Social from "@components/Social.astro";
 
-const { greeting, title, subTitle, content } = Astro.props;
+const { greeting, title, subTitle, content, cta, link, connect } = Astro.props;
 ---
 
 <section class="lg:grid lg:place-content-center">
@@ -22,12 +22,10 @@ const { greeting, title, subTitle, content } = Astro.props;
         {content}
       </p>
       <p class="mt-4 text-lg">
-        Want the full story? Read more <a
+        {cta}<a
           href="/about"
-          class="text-primary hover:text-secondary cursor-pointer"
-          >about my journey</a
-        >. And if you'd like to connect or say hi, feel free to reach out
-        through the links below.
+          class="text-primary hover:text-secondary cursor-pointer">{link}</a
+        >{connect}
       </p>
       <Social />
     </div>

@@ -117,4 +117,11 @@ about:
         valid: false
         inProgress: false
         status: "Expired"
+  cta:
+    - title: "Projects"
+      description: "Things I’ve been building while sharpening my Cloud and DevOps skills — small tools, experiments, and scripts that help me automate, learn, or solve something practical."
+      button: "Browse my projects"
+    - title: "Blog"
+      description: "Thoughts, notes, and observations from my learning journey — mostly around AWS, Terraform, scripting, and how I’m bridging infrastructure and code."
+      button: "Visit the blog"
 ---
