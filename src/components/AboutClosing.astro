@@ -19,11 +19,11 @@ const { closing } = Astro.props as IClosing;
     {
       closing.map((item) => (
         <div class="pl-4 ltr:sm:text-left rtl:sm:text-right">
-          <h2 class="w-auto text-2xl text-neutral-content font-bold cool-underline md:text-3xl">
+          <h2 class="w-auto text-2xl text-base-content font-bold cool-underline md:text-3xl">
             {item.title}
           </h2>
 
-          <ul class="w-auto text-neutral-content mt-8 md:block">
+          <ul class="w-auto text-base-content mt-8 md:block">
             {item.bullets.map((bullet) => (
               <li class="relative before:w-1 before:h-1 before:rounded-full before:bg-primary before:absolute before:-translate-x-4 before:translate-y-3">
                 {bullet}
@@ -37,10 +37,10 @@ const { closing } = Astro.props as IClosing;
   <div
     class="bg-neutral flex flex-col gap-y-4 items-center justify-center py-24"
   >
-    <p class="text-lg text-base-content">
+    <p class="text-lg text-neutral-content">
       If anything here resonates, feel free to <a
         href="mailto:me@omartiffer.cloud"
-        class="text-primary underline decoration-dotted underline-offset-2 decoration-accent hover:text-secondary"
+        class="text-secondary underline decoration-dotted underline-offset-2 decoration-accent hover:text-primary"
         >drop me a line</a
       > or connect via the links below.
     </p>
