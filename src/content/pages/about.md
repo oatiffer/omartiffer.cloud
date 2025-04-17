@@ -124,4 +124,17 @@ about:
     - title: "Blog"
       description: "Thoughts, notes, and observations from my learning journey — mostly around AWS, Terraform, scripting, and how I’m bridging infrastructure and code."
       button: "Visit the blog"
+  closing:
+    - title: "Beyond tech"
+      bullets:
+        - "Nine years as a husband, and four as the dad of a lovely little girl."
+        - "I value time with my family — it’s non-negotiable."
+        - "I’m an introvert. My social battery runs low — think first-gen smartphone (I’m friendly, I promise)."
+        - "I prefer quiet routines — walking, reflecting, or just stepping away from the screen."
+    - title: "\"Fun facts\""
+      bullets:
+        - "I’m not fully human until I’ve had my morning coffee."
+        - "I’ve always been a Linux guy. Haven’t touched a Mac, ever."
+        - "I’m a soccer fan. I used to play regularly — back when my knees cooperated."
+        - "I’m usually catching up on sleep I convinced myself I didn’t need. (See first bullet.)"
 ---

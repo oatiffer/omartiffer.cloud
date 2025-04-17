@@ -1,5 +1,6 @@
 ---
 import Social from "@components/Social.astro";
+import socialIcons from "@config/social.ts";
 
 const { greeting, title, subTitle, content, cta, link, connect } = Astro.props;
 ---
@@ -27,7 +28,7 @@ const { greeting, title, subTitle, content, cta, link, connect } = Astro.props;
           class="text-primary hover:text-secondary cursor-pointer">{link}</a
         >{connect}
       </p>
-      <Social />
+      <Social icons={socialIcons.hero} />
     </div>
 
     <div class="x-auto hidden lg:flex">

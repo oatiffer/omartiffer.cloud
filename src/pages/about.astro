@@ -1,13 +1,14 @@
 ---
+import { getEntry, type CollectionEntry } from "astro:content";
 import BaseLayout from "@layouts/BaseLayout.astro";
 import AboutIntro from "@components/AboutIntro.astro";
 import AboutJourney from "@components/AboutJourney.astro";
-import { getEntry, type CollectionEntry } from "astro:content";
 import AboutCerts from "@components/AboutCerts.astro";
 import AboutCTA from "@components/AboutCTA.astro";
+import AboutClosing from "@components/AboutClosing.astro";
 
 const {
-  about: { pageTitle, intro, journey, cta, certs },
+  about: { pageTitle, intro, journey, cta, certs, closing },
 } = ((await getEntry("pages", "about")) as CollectionEntry<"pages">).data;
 ---
 
@@ -16,4 +17,5 @@ const {
   <AboutJourney journey={journey} />
   <AboutCTA cta={cta} />
   <AboutCerts certs={certs} />
+  <AboutClosing closing={closing} />
 </BaseLayout>

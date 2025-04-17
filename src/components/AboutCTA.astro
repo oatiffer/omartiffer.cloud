@@ -13,12 +13,12 @@ const { cta } = Astro.props as ICta;
 <div class="h-24 bg-base-200"></div>
 <section class="bg-neutral text-lg leading-relaxed text-base-content">
   <div
-    class="mx-auto w-screen max-w-screen-xl flex flex-col gap-y-12 gap-x-8 pt-24 pb-24 px-4 sm:px-6 md:flex-row lg:px-8 lg:pt-24"
+    class="mx-auto w-screen max-w-screen-xl flex flex-col gap-y-16 gap-x-8 pt-24 pb-24 px-4 sm:px-6 md:flex-row lg:px-8 lg:pt-24"
   >
     {
       cta.map((item) => (
         <div class="text-center ltr:sm:text-left rtl:sm:text-right">
-          <h2 class="w-auto text-2xl text-neutral-content font-bold underline md:text-3xl">
+          <h2 class="w-auto text-2xl text-neutral-content font-bold cool-underline md:text-3xl">
             {item.title}
           </h2>
 

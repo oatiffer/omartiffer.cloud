@@ -1,0 +1,49 @@
+---
+import Social from "./Social.astro";
+import socialIcons from "@config/social.ts";
+
+interface IClosing {
+  closing: {
+    title: string;
+    bullets: string[];
+  }[];
+}
+
+const { closing } = Astro.props as IClosing;
+---
+
+<section class="bg-base-300 text-lg leading-relaxed text-base-content">
+  <div
+    class="mx-auto w-screen max-w-screen-xl flex flex-col gap-y-12 gap-x-8 pt-24 pb-24 px-4 sm:px-6 md:flex-row lg:px-8 lg:pt-24"
+  >
+    {
+      closing.map((item) => (
+        <div class="pl-4 ltr:sm:text-left rtl:sm:text-right">
+          <h2 class="w-auto text-2xl text-neutral-content font-bold cool-underline md:text-3xl">
+            {item.title}
+          </h2>
+
+          <ul class="w-auto text-neutral-content mt-8 md:block">
+            {item.bullets.map((bullet) => (
+              <li class="relative before:w-1 before:h-1 before:rounded-full before:bg-primary before:absolute before:-translate-x-4 before:translate-y-3">
+                {bullet}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))
+    }
+  </div>
+  <div
+    class="bg-neutral flex flex-col gap-y-4 items-center justify-center py-24"
+  >
+    <p class="text-lg text-base-content">
+      If anything here resonates, feel free to <a
+        href="mailto:me@omartiffer.cloud"
+        class="text-primary underline decoration-dotted underline-offset-2 decoration-accent hover:text-secondary"
+        >drop me a line</a
+      > or connect via the links below.
+    </p>
+    <Social icons={socialIcons.about} />
+  </div>
+</section>

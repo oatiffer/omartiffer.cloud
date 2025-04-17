@@ -55,6 +55,12 @@ export const pages = defineCollection({
             }),
           ),
         }),
+        closing: z.array(
+          z.object({
+            title: z.string(),
+            bullets: z.array(z.string()),
+          }),
+        ),
       })
       .optional(),
   }),

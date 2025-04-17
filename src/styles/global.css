@@ -99,6 +99,6 @@
   }
 }
 
-.underline {
+.cool-underline {
   @apply underline decoration-3 decoration-accent decoration-dotted underline-offset-8;
 }
