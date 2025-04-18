@@ -12,22 +12,26 @@ document.addEventListener("astro:page-load", () => {
       collapsedHeight = timeline.clientHeight;
 
       const expandedHeight = timeline.scrollHeight;
-      timeline.style.height = `${expandedHeight}px`;
-      shadow.style.visibility = "hidden";
+
+      requestAnimationFrame(() => {
+        timeline.style.height = `${expandedHeight}px`;
+        shadow.style.visibility = "hidden";
+      });
       isExpanded = true;
     });
 
   readLessBtn &&
     readLessBtn.addEventListener("click", () => {
-      window.scrollTo({
-        top: timeline.offsetTop,
-        behavior: "smooth",
+      requestAnimationFrame(() => {
+        window.scrollTo({
+          top: timeline.offsetTop,
+          behavior: "auto",
+        });
+
+        timeline.style.height = `${collapsedHeight}px`;
+        shadow.style.visibility = "visible";
+        isExpanded = false;
       });
-
-      timeline.style.height = `${collapsedHeight}px`;
-      shadow.style.visibility = "visible";
-      isExpanded = false;
-
     });
 
   window.addEventListener("resize", () => {

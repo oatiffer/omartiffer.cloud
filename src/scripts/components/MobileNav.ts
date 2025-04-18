@@ -29,10 +29,12 @@ document.addEventListener("astro:page-load", () => {
   document.addEventListener("mobile-nav-open", (event) => {
     const customEvent = event as CustomEvent;
     const { isOpen } = customEvent.detail;
-
     const mobileNav = document.getElementById("nav-mobile") as HTMLElement;
-    mobileNav.classList.toggle("-translate-x-full", isOpen === true);
-    mobileNav.classList.toggle("translate-x-full", isOpen === false);
+
+    requestAnimationFrame(() => {
+      mobileNav.classList.toggle("-translate-x-full", isOpen === true);
+      mobileNav.classList.toggle("translate-x-full", isOpen === false);
+    });
   });
 
   const mediaQuery = window.matchMedia("(min-width: 768px)");
