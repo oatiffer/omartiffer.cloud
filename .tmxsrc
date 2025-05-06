@@ -1,0 +1,4 @@
+tmux send-keys "vim ." ^M
+tmux new-window -d \; send-keys -t 2 "npm run dev" ^M
+tmux new-window -d \; send-keys -t 3 "git status" ^M
+
