@@ -3,6 +3,21 @@ import { header } from "@config/menu.json";
 import CloseIcon from "@assets/icons/close.svg";
 import Social from "./Social.astro";
 import socialIcons from "@config/social";
+
+const isCurrentPage = (href: string) => {
+  let normalizedPath = Astro.url.pathname.replace(import.meta.env.BASE_URL, "");
+  if (!normalizedPath.startsWith("/")) normalizedPath = "/" + normalizedPath;
+  if (!normalizedPath.endsWith("/")) normalizedPath += "/";
+
+  let normalizedHref = href;
+  if (!normalizedHref.startsWith("/")) normalizedHref = "/" + normalizedHref;
+  if (!normalizedHref.endsWith("/")) normalizedHref += "/";
+
+  return (
+    normalizedPath === normalizedHref ||
+    (normalizedHref !== "/" && normalizedPath.startsWith(normalizedHref))
+  );
+};
 ---
 
 <div
@@ -19,15 +34,14 @@ import socialIcons from "@config/social";
       />
     </button>
 
-    <ul class="mt-10 space-y-1">
+    <ul class="mt-26 space-y-2">
       {
         header.map((menuItem) => {
           return (
             <li>
               <a
-                id="menu-item"
                 href={menuItem.url}
-                class="hover:text-primary block px-4 py-4 text-center text-lg font-medium transition-colors duration-200"
+                    class={`${isCurrentPage(menuItem.url) && "text-primary"} hover:text-primary block px-4 py-4 text-center text-lg font-medium transition-colors duration-200`}
               >
                 {menuItem.name}
               </a>

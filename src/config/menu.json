@@ -10,11 +10,11 @@
     },
     {
       "name": "Projects",
-      "url": "/"
+      "url": "/projects"
     },
     {
       "name": "Blog",
-      "url": "/"
+      "url": "/blog"
     }
   ]
 }

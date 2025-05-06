@@ -8,6 +8,7 @@ interface ICta {
 }
 
 const { cta } = Astro.props as ICta;
+const [projects, blog] = cta;
 ---
 
 <div class="h-24 w-full bg-base-200"></div>
@@ -15,27 +16,45 @@ const { cta } = Astro.props as ICta;
   <div
     class="mx-auto w-screen max-w-screen-xl flex flex-col gap-y-16 gap-x-8 pt-24 pb-24 px-4 sm:px-6 md:flex-row lg:px-8 lg:pt-24"
   >
-    {
-      cta.map((item) => (
-        <div class="text-center ltr:md:text-left rtl:sm:text-right">
-          <h2 class="w-auto text-2xl text-neutral-content font-bold cool-underline md:text-3xl">
-            {item.title}
-          </h2>
+    <div class="text-center ltr:md:text-left rtl:sm:text-right">
+      <h2
+        class="w-auto text-2xl text-neutral-content font-bold cool-underline md:text-3xl"
+      >
+        {projects.title}
+      </h2>
 
-          <p class="w-auto text-neutral-content mt-8 md:block">
-            {item.description}
-          </p>
+      <p class="w-auto text-neutral-content mt-8 md:block">
+        {projects.description}
+      </p>
 
-          <div class="mt-4 md:mt-8">
-            <a
-              href="#Projects"
-              class="inline-block rounded-sm bg-secondary px-8 py-3 text-sm text-secondary-content font-medium transition hover:bg-secondary/80 focus:ring-1 focus:ring-accent focus:outline-hidden"
-            >
-              {item.button}
-            </a>
-          </div>
-        </div>
-      ))
-    }
+      <div class="mt-4 md:mt-8">
+        <a
+          href="/projects"
+          class="inline-block rounded-sm bg-secondary px-8 py-3 text-sm text-secondary-content font-medium transition hover:bg-secondary/80 focus:ring-1 focus:ring-accent focus:outline-hidden"
+        >
+          {projects.button}
+        </a>
+      </div>
+    </div>
+    <div class="text-center ltr:md:text-left rtl:sm:text-right">
+      <h2
+        class="w-auto text-2xl text-neutral-content font-bold cool-underline md:text-3xl"
+      >
+        {blog.title}
+      </h2>
+
+      <p class="w-auto text-neutral-content mt-8 md:block">
+        {blog.description}
+      </p>
+
+      <div class="mt-4 md:mt-8">
+        <a
+          href="/blog"
+          class="inline-block rounded-sm bg-secondary px-8 py-3 text-sm text-secondary-content font-medium transition hover:bg-secondary/80 focus:ring-1 focus:ring-accent focus:outline-hidden"
+        >
+          {blog.button}
+        </a>
+      </div>
+    </div>
   </div>
 </section>

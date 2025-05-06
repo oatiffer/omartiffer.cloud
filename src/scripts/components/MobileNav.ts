@@ -2,23 +2,11 @@ document.addEventListener("astro:page-load", () => {
   const closeButton = document.getElementById(
     "close-button",
   ) as HTMLButtonElement;
-  const menuItems = document.querySelectorAll(
-    "#menu-item",
-  ) as NodeListOf<HTMLElement>;
 
   // Close the mobile menu after view transition
   document.dispatchEvent(
     new CustomEvent("mobile-nav-open", { detail: { isOpen: false } }),
   );
-
-  // menuItems.forEach((item) => {
-  //   item.addEventListener("click", (event) => {
-  //     menuItems.forEach((i) => i.classList.remove("text-primary"));
-
-  //     const target = event.target as HTMLElement;
-  //     target.classList.add("text-primary");
-  //   });
-  // });
 
   closeButton.addEventListener("click", () => {
     document.dispatchEvent(
