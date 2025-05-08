@@ -8,35 +8,18 @@ This is the source code for my personal website: [omartiffer.cloud](https://omar
 
 ## 🛠️ Tech stack
 
-<table>
-  <tr>
-    <td align="center">
-      <a href="https://astro.build" target="_blank">
-        <img src="src/assets/icons//astro.svg" width="36" style="padding: 0 20px"/><br/>Astro
-      </a>
-    </td>
-    <td align="center">
-      <a href="https://www.typescriptlang.org" target="_blank">
-        <img src="src/assets/icons/typescript.svg" width="36" style="padding: 0 20px"/><br/>TypeScript
-      </a>
-    </td>
-    <td align="center">
-      <a href="https://tailwindcss.com" target="_blank">
-        <img src="src/assets/icons/tailwindcss.svg" width="40" style="padding: 0 20px"/><br/>Tailwind
-      </a>
-    </td>
-    <td align="center">
-      <a href="https://www.cloudflare.com" target="_blank">
-        <img src="src/assets/icons/cloudflare.svg" width="38" style="padding: 0 10px"/><br/>Cloudflare <br /> (Domain hosting)
-      </a>
-    </td>
-    <td align="center">
-      <a href="https://www.netlify.com" target="_blank">
-        <img src="src/assets/icons/netlify.svg" width="38" style="padding: 0 10px"/><br/>Netlify <br /> (Site hosting)
-      </a>
-    </td>
-  </tr>
-</table>
+<!-- [![Cloudflare](https://img.shields.io/badge/cloudflare-%20domain%20hosting-grey?labelColor=F96702&style=for-the-badge&logo=cloudflare&logoColor=white)](https://www.cloudflare.com/)
+[![Netlify](https://img.shields.io/badge/netlify-%20static%20site%20hosting-grey?labelColor=00C7B7&style=for-the-badge&logo=netlify&logoColor=white)](https://www.netlify.com/)
+[![Astro](https://img.shields.io/badge/astro-grey?labelColor=BC52EE&style=for-the-badge&logo=astro&logoColor=white)](https://astro.build)
+[![Tailwind](https://img.shields.io/badge/tailwind-grey?labelColor=06B6D4&style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![TypeScript](https://img.shields.io/badge/typescript-grey?labelColor=3178C6&style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/) -->
+
+[![Cloudflare](https://img.shields.io/badge/cloudflare%20%28domain%20hosting%29-grey?style=for-the-badge&logo=cloudflare)](https://www.cloudflare.com/)
+[![Netlify](https://img.shields.io/badge/netlify%20%28static%20site%20hosting%29-grey?style=for-the-badge&logo=netlify)](https://www.netlify.com/)
+[![Astro](https://img.shields.io/badge/astro-grey?style=for-the-badge&logo=astro)](https://astro.build)
+[![TypeScript](https://img.shields.io/badge/typescript-grey?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
+[![Tailwind](https://img.shields.io/badge/tailwind%20css-grey?style=for-the-badge&logo=tailwindcss)](https://tailwindcss.com/)
+
 
 ## 📂 Project Structure
 
