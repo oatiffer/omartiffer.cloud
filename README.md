@@ -1,10 +1,11 @@
-# omartiffer.cloud
+# My portfolio/blog website
 
-This is the source code for my personal website: [omartiffer.cloud](https://omartiffer.cloud).
+This is the source code for my website: [omartiffer.cloud](https://omartiffer.cloud). It’s intended to serve as a portfolio of projects I’m working on, and a blog to document my journey and share what I’m learning.
 <br /><br />
 [![Netlify Status](https://api.netlify.com/api/v1/badges/072bc60c-5ab6-486b-a4d6-50e704fab1f4/deploy-status)](https://app.netlify.com/sites/omartiffer/deploys)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-![Screenshot](/public/screenshot.png)
+![Screenshot of omartiffer.cloud homepage](public/screenshot.png)
 
 ## 🛠️ Tech stack
 
@@ -14,12 +15,14 @@ This is the source code for my personal website: [omartiffer.cloud](https://omar
 [![Tailwind](https://img.shields.io/badge/tailwind-grey?labelColor=06B6D4&style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
 [![TypeScript](https://img.shields.io/badge/typescript-grey?labelColor=3178C6&style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 
-<!-- [![Cloudflare](https://img.shields.io/badge/cloudflare%20%28domain%20hosting%29-grey?style=for-the-badge&logo=cloudflare)](https://www.cloudflare.com/)
-[![Netlify](https://img.shields.io/badge/netlify%20%28static%20site%20hosting%29-grey?style=for-the-badge&logo=netlify)](https://www.netlify.com/)
-[![Astro](https://img.shields.io/badge/astro-grey?style=for-the-badge&logo=astro)](https://astro.build)
-[![TypeScript](https://img.shields.io/badge/typescript-grey?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
-[![Tailwind](https://img.shields.io/badge/tailwind%20css-grey?style=for-the-badge&logo=tailwindcss)](https://tailwindcss.com/) -->
+## ✨ Features
 
+- ⚡ Built with Astro and Tailwind CSS
+- 🌗 Dark/Light theme toggle
+- 📱 Responsive design
+- 🧩 Component-based structure
+- 📝 Markdown-powered content pages
+- 🖊️ Blog (coming soon)
 
 ## 📂 Project Structure
 
@@ -35,8 +38,9 @@ This is the source code for my personal website: [omartiffer.cloud](https://omar
 │   └── content.config.ts       # Collection definitions
 ├── .gitignore                  # Files to ignore in Git
 ├── .prettierrc                 # Code formatting
-├── .tmxsrc                     # Tmux sessionizer bootstraper
-├── README.md                   # This readme
+├── .tmxsrc                     # Tmux sessionizer bootstrapper
+├── LICENSE                     # License file
+├── README.md                   # This readme file
 ├── astro.config.mjs            # Astro project config
 ├── eslint.config.js            # Linting rules
 ├── package.json                # Dependencies and scripts
