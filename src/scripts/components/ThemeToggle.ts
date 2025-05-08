@@ -14,7 +14,7 @@ document.addEventListener("astro:page-load", () => {
     toggleTheme("dark");
   });
 
-  function toggleTheme(theme: string) {
+  const toggleTheme = (theme: string) => {
     document.dispatchEvent(
       new CustomEvent("theme-toggle", { detail: { theme } }),
     );

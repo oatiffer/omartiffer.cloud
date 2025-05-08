@@ -23,7 +23,7 @@ document.addEventListener("astro:page-load", () => {
   });
 });
 
-function setTheme(theme: string) {
+const setTheme = (theme: string) => {
   // Set the theme in the document
   document.documentElement.classList.toggle("dark", theme === "dark");
   document.documentElement.classList.toggle("light", theme === "light");

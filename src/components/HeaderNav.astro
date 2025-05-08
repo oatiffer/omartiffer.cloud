@@ -24,7 +24,7 @@ const isCurrentPage = (href: string) => {
         return (
           <li>
             <a
-                class={`${isCurrentPage(menuItem.url) && "text-primary"} text-base-content text-lg hover:text-primary transition-colors duration-200`}
+              class={`${isCurrentPage(menuItem.url) && "text-primary"} text-base-content text-lg hover:text-primary transition-colors duration-200`}
               href={menuItem.url}
             >
               {menuItem.name}
@@ -35,16 +35,3 @@ const isCurrentPage = (href: string) => {
     }
   </ul>
 </nav>
-
-<script>
-  const menuItems = document.querySelectorAll("#menu-item");
-
-  menuItems.forEach((item) => {
-    item.addEventListener("click", (event) => {
-      menuItems.forEach((i) => i.classList.remove("text-primary"));
-
-      const target = event.target as HTMLElement;
-      target.classList.add("text-primary");
-    });
-  });
-</script>

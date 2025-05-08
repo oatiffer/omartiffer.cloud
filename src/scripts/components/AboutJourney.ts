@@ -7,32 +7,30 @@ document.addEventListener("astro:page-load", () => {
   let collapsedHeight: number;
   let isExpanded = false;
 
-  readMoreBtn &&
-    readMoreBtn.addEventListener("click", () => {
-      collapsedHeight = timeline.clientHeight;
+  readMoreBtn?.addEventListener("click", () => {
+    collapsedHeight = timeline.clientHeight;
 
-      const expandedHeight = timeline.scrollHeight;
+    const expandedHeight = timeline.scrollHeight;
 
-      requestAnimationFrame(() => {
-        timeline.style.height = `${expandedHeight}px`;
-        shadow.style.visibility = "hidden";
-      });
-      isExpanded = true;
+    requestAnimationFrame(() => {
+      timeline.style.height = `${expandedHeight}px`;
+      shadow.style.visibility = "hidden";
     });
+    isExpanded = true;
+  });
 
-  readLessBtn &&
-    readLessBtn.addEventListener("click", () => {
-      requestAnimationFrame(() => {
-        window.scrollTo({
-          top: timeline.offsetTop,
-          behavior: "auto",
-        });
-
-        timeline.style.height = `${collapsedHeight}px`;
-        shadow.style.visibility = "visible";
-        isExpanded = false;
+  readLessBtn?.addEventListener("click", () => {
+    requestAnimationFrame(() => {
+      window.scrollTo({
+        top: timeline.offsetTop,
+        behavior: "auto",
       });
+
+      timeline.style.height = `${collapsedHeight}px`;
+      shadow.style.visibility = "visible";
+      isExpanded = false;
     });
+  });
 
   window.addEventListener("resize", () => {
     if (isExpanded) {
