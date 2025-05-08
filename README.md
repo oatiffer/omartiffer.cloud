@@ -76,6 +76,6 @@ npm run dev
 
 ## Attributions
 
-- Some component HTML structure was modified from [HyperUI](https://www.hyperui.dev/)
-- Timeline HTML structure modified from [Preline UI](https://www.preline.co/)
+- Some HTML components were adapted from [HyperUI](https://www.hyperui.dev/)
+- Timeline HTML structure adapted from [Preline UI](https://www.preline.co/)
 - Dark/Light themes were generated using [daisyUI](https://daisyui.com/theme-generator)
