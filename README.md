@@ -1,48 +1,98 @@
-# Astro Starter Kit: Basics
+# omartiffer.cloud
 
-```sh
-npm create astro@latest -- --template basics
-```
+This is the source code for my personal website: [omartiffer.cloud](https://omartiffer.cloud).
+<br /><br />
+[![Netlify Status](https://api.netlify.com/api/v1/badges/072bc60c-5ab6-486b-a4d6-50e704fab1f4/deploy-status)](https://app.netlify.com/sites/omartiffer/deploys)
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+![Screenshot](/public/screenshot.png)
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 🛠️ Tech stack
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://astro.build" target="_blank">
+        <img src="src/assets/icons//astro.svg" width="36" style="padding: 0 20px"/><br/>Astro
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://www.typescriptlang.org" target="_blank">
+        <img src="src/assets/icons/typescript.svg" width="36" style="padding: 0 20px"/><br/>TypeScript
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://tailwindcss.com" target="_blank">
+        <img src="src/assets/icons/tailwindcss.svg" width="40" style="padding: 0 20px"/><br/>Tailwind
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://www.cloudflare.com" target="_blank">
+        <img src="src/assets/icons/cloudflare.svg" width="38" style="padding: 0 10px"/><br/>Cloudflare <br /> (Domain hosting)
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://www.netlify.com" target="_blank">
+        <img src="src/assets/icons/netlify.svg" width="38" style="padding: 0 10px"/><br/>Netlify <br /> (Site hosting)
+      </a>
+    </td>
+  </tr>
+</table>
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
+## 📂 Project Structure
 
 ```text
 /
-├── public/
-│   └── favicon.svg
+├── public/                     # Static assets (images, icons, etc.)
 ├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+│   ├── components/             # Shared components
+│   ├── config/                 # Config files (menu and social icons)
+│   ├── content/                # Content collection for all pages
+│   ├── layouts/                # Shared layout components
+│   ├── pages/                  # Site pages (e.g., index.astro)
+│   └── content.config.ts       # Collection definitions
+├── .gitignore                  # Files to ignore in Git
+├── .prettierrc                 # Code formatting
+├── .tmxsrc                     # Tmux sessionizer bootstraper
+├── README.md                   # This readme
+├── astro.config.mjs            # Astro project config
+├── eslint.config.js            # Linting rules
+├── package.json                # Dependencies and scripts
+└── tsconfig.json               # TypeScript settings
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## 🚀 Want to try it locally?
 
-## 🧞 Commands
+You will need `node` and `npm` installed on your machine. You can install them by
+following the instructions [here](https://nodejs.org/en/download).
 
-All commands are run from the root of the project, from a terminal:
+### 1. Clone the repo
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+```bash
+git clone https://github.com/oatiffer/omartiffer.cloud.git
+```
 
-## 👀 Want to learn more?
+### 2. Go into the project directory
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+```bash
+cd omartiffer.cloud
+```
+
+### 3. Install dependencies
+
+```bash
+npm install
+```
+
+### 4. Start the development server
+
+```bash
+npm run dev
+```
+
+#### Then open [`http://localhost:4321`](http://localhost:4321) in your browser
+
+## Attributions
+
+- Some component HTML structure was modified from [HyperUI](https://www.hyperui.dev/)
+- Timeline HTML structure modified from [Preline UI](https://www.preline.co/)
+- Dark/Light themes were generated using [daisyUI](https://daisyui.com/theme-generator)
