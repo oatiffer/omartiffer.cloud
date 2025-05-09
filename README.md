@@ -6,7 +6,7 @@ This is the source code for my website: [omartiffer.cloud](https://omartiffer.cl
 [![Netlify Status](https://api.netlify.com/api/v1/badges/072bc60c-5ab6-486b-a4d6-50e704fab1f4/deploy-status)](https://app.netlify.com/sites/omartiffer/deploys)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-![Screenshot of omartiffer.cloud homepage](src/assets/screenshot.png)
+![Screenshot of omartiffer.cloud homepage](src/assets/images/screenshot.png)
 
 ## 🛠️ Tech stack
 

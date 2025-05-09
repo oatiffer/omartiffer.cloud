@@ -41,7 +41,7 @@ const isCurrentPage = (href: string) => {
             <li>
               <a
                 href={menuItem.url}
-                    class={`${isCurrentPage(menuItem.url) && "text-primary"} hover:text-primary block px-4 py-4 text-center text-lg font-medium transition-colors duration-200`}
+                class={`${isCurrentPage(menuItem.url) && "text-primary"} hover:text-primary block px-4 py-4 text-center text-lg font-medium transition-colors duration-200`}
               >
                 {menuItem.name}
               </a>
@@ -55,7 +55,7 @@ const isCurrentPage = (href: string) => {
   <div
     class="h-20 sticky flex items-center justify-center inset-x-0 bottom-0 bg-base-300"
   >
-    <Social fill={"fill-base-content"} icons={socialIcons.main} />
+    <Social icons={socialIcons.main} />
   </div>
 </div>
 

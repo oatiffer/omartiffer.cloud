@@ -35,7 +35,7 @@ about:
           ]
       - date: "2021 - 2022"
         role: "Sabbatical - Web Development Bootcamp"
-        summary: "I took time off to pivot into web development, enrolling in a full-time bootcamp where I learned HTML, CSS, JavaScript, React, Vue, PHP, Laravel, and MySQL. Through hands-on projects, I built everything from responsive layouts based on Figma designs to dynamic content sites powered by public APIs. I also developed foundational fullstack apps — including a to-do list and a real-time chat app — using React on the frontend and Laravel on the backend. This experience marked a key shift from infrastructure to software development and laid the groundwork for my next chapter in tech."
+        summary: "I took time off to pivot into web development, enrolling in a full-time bootcamp where I learned HTML, CSS, JavaScript, React, Vue, PHP, Laravel, and MySQL. Through hands-on projects, I built everything from responsive layouts based on Figma designs to dynamic content sites powered by public APIs, as well as foundational fullstack apps — like a to-do list and a real-time chat app — using React on the frontend and Laravel on the backend. This experience marked a key shift from infrastructure to software development and laid the foundation for my next chapter in tech."
         stack: ["HTML", "CSS", "JavaScript", "React", "PHP", "Laravel", MySQL]
       - date: "2019 - 2021"
         role: "Technical Sales Engineer - IBM, Lenovo & VMware Partner"
