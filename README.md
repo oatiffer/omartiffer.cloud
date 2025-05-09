@@ -39,7 +39,6 @@ This is the source code for my website: [omartiffer.cloud](https://omartiffer.cl
 ├── .prettierrc                 # Code formatting
 ├── .tmxsrc                     # Tmux sessionizer bootstrapper
 ├── LICENSE                     # License file
-├── README.md                   # This readme file
 ├── astro.config.mjs            # Astro project config
 ├── eslint.config.js            # Linting rules
 ├── package.json                # Dependencies and scripts
