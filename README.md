@@ -2,10 +2,11 @@
 
 This is the source code for my website: [omartiffer.cloud](https://omartiffer.cloud). It’s intended to serve as a portfolio of projects I’m working on, and a blog to document my journey and share what I’m learning.
 <br /><br />
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/072bc60c-5ab6-486b-a4d6-50e704fab1f4/deploy-status)](https://app.netlify.com/sites/omartiffer/deploys)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-![Screenshot of omartiffer.cloud homepage](public/screenshot.png)
+![Screenshot of omartiffer.cloud homepage](src/assets/screenshot.png)
 
 ## 🛠️ Tech stack
 
@@ -18,7 +19,6 @@ This is the source code for my website: [omartiffer.cloud](https://omartiffer.cl
 ## ✨ Features
 
 - ⚡ Built with Astro and Tailwind CSS
-- 🌗 Dark/Light theme toggle
 - 📱 Responsive design
 - 🧩 Component-based structure
 - 📝 Markdown-powered content pages
@@ -48,9 +48,6 @@ This is the source code for my website: [omartiffer.cloud](https://omartiffer.cl
 ```
 
 ## 🚀 Want to try it locally?
-
-You will need `node` and `npm` installed on your machine. You can install them by
-following the instructions [here](https://nodejs.org/en/download).
 
 ### 1. Clone the repo
 
