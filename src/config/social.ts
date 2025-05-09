@@ -63,7 +63,7 @@ const socialIcons = {
       height: 20,
       href: "https://x.com/omartiffer",
     },
-  ]
-}
+  ],
+};
 
 export default socialIcons;

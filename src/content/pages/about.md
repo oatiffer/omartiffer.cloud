@@ -3,7 +3,6 @@ about:
   pageTitle: "About"
   intro:
     title: "Quick intro"
-    image: "/me.png"
     content: "I started my journey in tech back in 2008, fresh out of college, configuring Linux servers at the domain registry of my country (.ni). It was hands-on, challenging, and laid the foundation for a diverse career spanning a range of technical roles — from systems administration to enterprise virtualization, technical sales, frontend development, and data migrations.\nOver the years I've worn many hats. I’ve worked with technologies like Netfilter/IPTables, Apache, Postfix, VMware, DellEMC, Cisco UCS, F5 Big-IP, React, Tailwind, Python, and more. My hands-on experience includes building infrastructure from scratch, designing, deploying, and supporting virtualization solutions, and creating responsive web apps. After relocating to the US, I began working on data migrations for customers adopting a legal SaaS platform, streamlining their onboarding by leveraging Python scripting, SQL, and API integrations.\nMy goal now? To fully transition into Cloud and DevOps engineering — bringing together years of infrastructure experience, programming knowledge, a drive for continuous learning, and a mindset for automation and scalability."
   journey:
     title: "The timeline"
@@ -25,7 +24,15 @@ about:
         role: "Frontend Development - Costa Rican Agency/Startup"
         summary: "I joined a development team focused on a React-based SaaS app, contributing new features, UI fixes, and enhancements using React, Redux, Tailwind, and Vitest. I became comfortable working independently — translating Figma designs into pixel-perfect, responsive interfaces — while also supporting my fellow junior developers through pair programming and technical guidance. We used Git for version control and Azure DevOps for ticket tracking and daily standups. I also ramped up quickly on jQuery and SCSS for a separate project, delivering results under a tight timeline. This role helped solidify my frontend fundamentals and my ability to thrive in a fast-paced, collaborative environment."
         stack:
-          ["React","TypeScript","TailwindCSS","Vitest","Git","jQuery","Sass",]
+          [
+            "React",
+            "TypeScript",
+            "TailwindCSS",
+            "Vitest",
+            "Git",
+            "jQuery",
+            "Sass",
+          ]
       - date: "2021 - 2022"
         role: "Sabbatical - Web Development Bootcamp"
         summary: "I took time off to pivot into web development, enrolling in a full-time bootcamp where I learned HTML, CSS, JavaScript, React, Vue, PHP, Laravel, and MySQL. Through hands-on projects, I built everything from responsive layouts based on Figma designs to dynamic content sites powered by public APIs. I also developed foundational fullstack apps — including a to-do list and a real-time chat app — using React on the frontend and Laravel on the backend. This experience marked a key shift from infrastructure to software development and laid the groundwork for my next chapter in tech."
@@ -68,55 +75,6 @@ about:
           ]
   certs:
     title: "The certs"
-    items:
-      - name: "AWS Certified Solutions Architect – Associate"
-        src: "/certs/aws-saa.png"
-        link: ""
-        valid: false
-        inProgress: true
-        status: "In progress"
-      - name: "Microsoft Certified: Azure Fundamentals"
-        src: "/certs/azure-fundamentals.png"
-        link: "https://www.credly.com/badges/a41b8bc2-9679-4acf-ad5d-0ba231b56041/public_url"
-        valid: true
-        inProgress: false
-        status: "Current"
-      - name: "VMware Certified Professional – Data Center Virtualization"
-        src: "/certs/vmware-vcp.png"
-        link: "https://www.credly.com/badges/eea2bcfd-c210-4fe0-bb0a-d42c6d3856c7/public_url"
-        valid: true
-        inProgress: false
-        status: "Current"
-      - name: "CompTIA Network Infrastructure Professional"
-        src: "/certs/comptia-cnip.png"
-        link: "https://www.credly.com/badges/3ddf688b-a0ae-4ec6-bdea-7db65172fdc0/public_url"
-        valid: false
-        inProgress: false
-        status: "Expired"
-      - name: "PCEP - Certified Entry-Level Python Programmer"
-        src: "/certs/python-pcep.png"
-        link: "https://www.credly.com/badges/4cb506e6-b896-4c51-af3d-f8cd9349e001/public_url"
-        valid: true
-        inProgress: false
-        status: "Current"
-      - name: "CompTIA Server+"
-        src: "/certs/comptia-serverplus.png"
-        link: "https://www.credly.com/badges/9bf7d681-4444-4c8b-8a43-49d3b6b5d781/public_url"
-        valid: true
-        inProgress: false
-        status: "Current"
-      - name: "CompTIA Network+"
-        src: "/certs/comptia-netplus.png"
-        link: "https://www.credly.com/badges/a78e7244-9ddd-49ee-a5d2-38cb0e695723/public_url"
-        valid: false
-        inProgress: false
-        status: "Expired"
-      - name: "F5 Certified Administrator, BIG-IP"
-        src: "/certs/f5-bigip.png"
-        link: "https://www.credly.com/badges/d39200e3-1f06-4b3a-b902-92a40a74e727/public_url"
-        valid: false
-        inProgress: false
-        status: "Expired"
   cta:
     - title: "Projects"
       description: "Things I’ve been building while sharpening my Cloud and DevOps skills — small tools, experiments, and scripts that help me automate, learn, or solve something practical."
@@ -131,7 +89,7 @@ about:
         - "I value time with my family — it’s non-negotiable."
         - "I’m an introvert. My social battery runs low — think first-gen smartphone (I’m friendly, I promise)."
         - "I prefer quiet routines — walking, reflecting, or just stepping away from the screen."
-    - title: "\"Fun facts\""
+    - title: '"Fun facts"'
       bullets:
         - "I’m not fully human until I’ve had my morning coffee."
         - "I’ve always been a Linux guy. Haven’t touched a Mac, ever."

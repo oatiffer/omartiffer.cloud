@@ -21,7 +21,6 @@ export const pages = defineCollection({
         pageTitle: z.string(),
         intro: z.object({
           title: z.string(),
-          image: z.string(),
           content: z.string(),
         }),
         timeline: z.object({
@@ -35,6 +34,9 @@ export const pages = defineCollection({
             }),
           ),
         }),
+        certs: z.object({
+          title: z.string(),
+        }),
         cta: z.array(
           z.object({
             title: z.string(),
@@ -42,19 +44,6 @@ export const pages = defineCollection({
             button: z.string(),
           }),
         ),
-        certs: z.object({
-          title: z.string(),
-          items: z.array(
-            z.object({
-              name: z.string(),
-              src: z.string(),
-              link: z.string(),
-              valid: z.boolean(),
-              inPrgress: z.boolean(),
-              status: z.string(),
-            }),
-          ),
-        }),
         closing: z.array(
           z.object({
             title: z.string(),

@@ -1,6 +1,7 @@
 ---
 import Social from "@components/Social.astro";
 import socialIcons from "@config/social.ts";
+import heroImg from "@assets/images/hero.png";
 
 const { greeting, title, subTitle, content, cta, link, connect } = Astro.props;
 ---
@@ -27,12 +28,12 @@ const { greeting, title, subTitle, content, cta, link, connect } = Astro.props;
         >{connect}
       </p>
       <div class="mt-4 sm:mt-6">
-        <Social fill={"fill-base-content"} icons={socialIcons.main} />
+        <Social icons={socialIcons.main} />
       </div>
     </div>
 
     <div class="x-auto hidden lg:flex">
-      <img class="x-auto" src="/hero.png" alt="Hero Image" />
+      <img class="x-auto" src={heroImg.src} alt="Hero Image" />
     </div>
   </div>
 </section>
