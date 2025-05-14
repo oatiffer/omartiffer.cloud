@@ -133,7 +133,7 @@ about:
     - title: "Projects"
       description: "Things I’ve been building while sharpening my Cloud and DevOps skills — small tools, experiments, and scripts that help me automate, learn, or solve something practical."
       button: "Browse my projects"
-    - title: "Blog"
+    - title: "Blog (coming soon)"
       description: "Thoughts, notes, and observations from my learning journey and how I’m bridging infrastructure and code."
       button: "Visit the blog"
   closing:
