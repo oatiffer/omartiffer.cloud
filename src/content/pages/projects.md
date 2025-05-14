@@ -1,6 +1,8 @@
 ---
 projects:
-  pageTitle: "Things I've been working on"
+  pageTitle: "Projects"
+  title: "Things I've been working on"
+  description: "More projects coming soon as I continue building."
   projectList:
     - title: ".dotfiles"
       image: "dotfiles"

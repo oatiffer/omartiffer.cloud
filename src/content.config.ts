@@ -66,6 +66,8 @@ export const pages = defineCollection({
     projects: z
       .object({
         pageTitle: z.string(),
+        title: z.string(),
+        description: z.string(),
         projectList: z.array(
           z.object({
             title: z.string(),
