@@ -7,7 +7,16 @@ import f5 from "@assets/images/certs/f5-bigip.png";
 import python from "@assets/images/certs/python-pcep.png";
 import vmware from "@assets/images/certs/vmware-vcp.png";
 
-const certs = [
+interface ICert {
+  name: string;
+  img: ImageMetadata;
+  link: string;
+  valid: boolean;
+  inProgress: boolean;
+  status: "Current" | "Expired" | "In progress";
+}
+
+const certs: ICert[] = [
   {
     name: "AWS Certified Solutions Architect – Associate",
     img: aws,
