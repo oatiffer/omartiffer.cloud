@@ -2,16 +2,7 @@
 import certs from "@config/certs";
 import Credly from "@assets/icons/credly.svg";
 
-interface ICert {
-  name: string;
-  img: ImageMetadata;
-  link: string;
-  valid: boolean;
-  inProgress: boolean;
-  status: "Current" | "Expired" | "In progress";
-}
-
-const { title } = Astro.props.certs;
+const { title, description } = Astro.props.certs;
 ---
 
 <section class="w-full text-lg text-base-content bg-base-200">
@@ -22,14 +13,11 @@ const { title } = Astro.props.certs;
       {title}
     </h1>
     <p class="mt-12">
-      These are some of the certifications I’ve picked up along the way. A few
-      are still current, others have expired, and some I’m working on now — but
-      all of them reflect parts of the journey and the areas I’ve spent time
-      learning and working in.
+      {description}
     </p>
     <ul class="flex flex-wrap justify-center mt-12 gap-y-12">
       {
-        certs.map((cert: ICert) => (
+        certs.map((cert) => (
           <li class="flex justify-center sm:w-1/2 md:w-1/4">
             <a
               href={cert.link ? cert.link : null}

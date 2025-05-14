@@ -75,6 +75,11 @@ about:
           ]
   certs:
     title: "The certs"
+    description:
+      "These are some of the certifications I’ve picked up along the way. A few
+      are still current, others have expired, and some I’m working on now — but
+      all of them reflect parts of the journey and the areas I’ve spent time
+      learning and working in."
   cta:
     - title: "Projects"
       description: "Things I’ve been building while sharpening my Cloud and DevOps skills — small tools, experiments, and scripts that help me automate, learn, or solve something practical."
