@@ -4,10 +4,10 @@ import BaseLayout from "@layouts/BaseLayout.astro";
 import { getEntry, type CollectionEntry } from "astro:content";
 
 const {
-  projects: { pageTitle, projectList },
+  projects: { pageTitle, ...rest },
 } = ((await getEntry("pages", "projects")) as CollectionEntry<"projects">).data;
 ---
 
 <BaseLayout title={pageTitle}>
-  <ProjectList title={pageTitle} projects={projectList} />
+  <ProjectList {...rest} />
 </BaseLayout>
