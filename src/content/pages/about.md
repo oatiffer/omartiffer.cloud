@@ -80,24 +80,74 @@ about:
       are still current, others have expired, and some I’m working on now — but
       all of them reflect parts of the journey and the areas I’ve spent time
       learning and working in."
+    certList:
+      - name: "AWS Certified Solutions Architect – Associate"
+        img: "aws"
+        link: ""
+        valid: false
+        inProgress: true
+        status: "In progress"
+      - name: "Microsoft Certified: Azure Fundamentals"
+        img: "azure"
+        link: "https://www.credly.com/badges/a41b8bc2-9679-4acf-ad5d-0ba231b56041/public_url"
+        valid: true
+        inProgress: false
+        status: "Current"
+      - name: "VMware Certified Professional – Data Center Virtualization"
+        img: "vmware"
+        link: "https://www.credly.com/badges/eea2bcfd-c210-4fe0-bb0a-d42c6d3856c7/public_url"
+        valid: true
+        inProgress: false
+        status: "Current"
+      - name: "CompTIA Network Infrastructure Professional"
+        img: "cnip"
+        link: "https://www.credly.com/badges/3ddf688b-a0ae-4ec6-bdea-7db65172fdc0/public_url"
+        valid: false
+        inProgress: false
+        status: "Expired"
+      - name: "PCEP - Certified Entry-Level Python Programmer"
+        img: "python"
+        link: "https://www.credly.com/badges/4cb506e6-b896-4c51-af3d-f8cd9349e001/public_url"
+        valid: true
+        inProgress: false
+        status: "Current"
+      - name: "CompTIA Server+"
+        img: "serverplus"
+        link: "https://www.credly.com/badges/9bf7d681-4444-4c8b-8a43-49d3b6b5d781/public_url"
+        valid: true
+        inProgress: false
+        status: "Current"
+      - name: "CompTIA Network+"
+        img: "netplus"
+        link: "https://www.credly.com/badges/a78e7244-9ddd-49ee-a5d2-38cb0e695723/public_url"
+        valid: false
+        inProgress: false
+        status: "Expired"
+      - name: "F5 Certified Administrator, BIG-IP"
+        img: "f5"
+        link: "https://www.credly.com/badges/d39200e3-1f06-4b3a-b902-92a40a74e727/public_url"
+        valid: false
+        inProgress: false
+        status: "Expired"
   cta:
     - title: "Projects"
       description: "Things I’ve been building while sharpening my Cloud and DevOps skills — small tools, experiments, and scripts that help me automate, learn, or solve something practical."
       button: "Browse my projects"
     - title: "Blog"
-      description: "Thoughts, notes, and observations from my learning journey — mostly around AWS, Terraform, scripting, and how I’m bridging infrastructure and code."
+      description: "Thoughts, notes, and observations from my learning journey and how I’m bridging infrastructure and code."
       button: "Visit the blog"
   closing:
     - title: "Beyond tech"
       bullets:
         - "Nine years as a husband, and four as the dad of a lovely little girl."
         - "I value time with my family — it’s non-negotiable."
-        - "I’m an introvert. My social battery runs low — think first-gen smartphone (I’m friendly, I promise)."
+        - "I’m an introvert. My social battery runs low (I’m friendly, I promise)."
         - "I prefer quiet routines — walking, reflecting, or just stepping away from the screen."
+        - "I’m a soccer fan. I used to play regularly — back when my knees cooperated."
     - title: '"Fun facts"'
       bullets:
         - "I’m not fully human until I’ve had my morning coffee."
         - "I’ve always been a Linux guy. Haven’t touched a Mac, ever."
-        - "I’m a soccer fan. I used to play regularly — back when my knees cooperated."
         - "I’m usually catching up on sleep I convinced myself I didn’t need. (See first bullet.)"
+        - "I use Neovim (btw)."
 ---

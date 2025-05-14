@@ -36,7 +36,17 @@ export const pages = defineCollection({
         }),
         certs: z.object({
           title: z.string(),
-          description: z.string()
+          description: z.string(),
+          certList: z.array(
+            z.object({
+              name: z.string(),
+              img: z.string(),
+              link: z.string(),
+              valid: z.boolean(),
+              inProgress: z.boolean(),
+              status: z.string(),
+            }),
+          ),
         }),
         cta: z.array(
           z.object({
@@ -63,10 +73,10 @@ export const pages = defineCollection({
             description: z.string(),
             github: z.string(),
             demo: z.string(),
-            stack: z.array(z.string())
-          })
-        )
+            stack: z.array(z.string()),
+          }),
+        ),
       })
-      .optional()
+      .optional(),
   }),
 });
