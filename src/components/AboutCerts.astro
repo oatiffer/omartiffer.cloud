@@ -1,6 +1,7 @@
 ---
 import certImgs from "@config/certs";
 import Credly from "@assets/icons/credly.svg";
+import { Image } from "astro:assets";
 
 interface ICerts {
   title: string;
@@ -38,11 +39,12 @@ const { title, description, certList } = Astro.props.certs as ICerts;
               rel="noopener noreferrer"
             >
               <div class="flex flex-col w-40 h-50 gap-y-2 items-center justify-between cursor-pointer group hover:scale-110 transition-transform duration-200 ">
-                <img
-                  src={certImgs[cert.img].src}
+                <Image
+                  src={certImgs[cert.img]}
                   height={100}
                   width={100}
                   alt={cert.name}
+                  quality={100}
                 />
                 <p class="text-center text-sm font-medium">{cert.name}</p>
                 <p
