@@ -22,9 +22,9 @@ const { title, items }: ITimeline = Astro.props.journey;
     {
       items.map((item) => (
         <div class="ps-2 my-2 mt-14 not-first-of-type:mt-0 flex flex-col md:flex-row md:gap-x-3">
-          <h3 class="font-medium uppercase min-w-26 text-base-content">
+          <h2 class="font-medium uppercase min-w-26 text-base-content">
             {item.date}
-          </h3>
+          </h2>
           <div class="flex gap-x-3">
             <div class="relative last:after:hidden after:absolute after:top-7 after:-bottom-1 after:start-3.5 after:w-px after:-translate-x-[0.5px] after:bg-base-content">
               <div class="relative z-10 size-7 flex justify-center items-center">

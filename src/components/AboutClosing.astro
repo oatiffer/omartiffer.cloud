@@ -37,14 +37,14 @@ const { closing } = Astro.props as IClosing;
   <div
     class="bg-neutral flex flex-col gap-y-4 items-center justify-center py-24"
   >
-    <p class="px-4 text-lg text-neutral-content text-center">
+    <p class="px-4 text-lg text-white text-center">
       If anything here resonates, feel free to <a
         href="mailto:me@omartiffer.cloud"
-        class="text-secondary hover:text-primary">drop me a line</a
+        class="text-accent hover:text-secondary">drop me a line</a
       > or connect via the links below.
     </p>
     <div class="mt-4">
-      <Social icons={socialIcons.about} />
+      <Social fill="fill-white" icons={socialIcons.about} />
     </div>
   </div>
 </section>
