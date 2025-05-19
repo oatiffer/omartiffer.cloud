@@ -8,6 +8,6 @@ const {
 } = ((await getEntry("pages", "projects")) as CollectionEntry<"projects">).data;
 ---
 
-<BaseLayout title={pageTitle}>
+<BaseLayout title={`Omar Tiffer - ${pageTitle}`}>
   <ProjectList {...rest} />
 </BaseLayout>
