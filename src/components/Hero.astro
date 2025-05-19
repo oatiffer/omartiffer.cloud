@@ -25,7 +25,8 @@ const { greeting, title, subTitle, content, cta, link, connect } = Astro.props;
       <p class="mt-4 md:text-lg">
         {cta}<a
           href="/about"
-          class="text-primary hover:text-secondary cursor-pointer">{link}</a
+          class="text-primary hover:text-secondary cursor-pointer underline underline-offset-4"
+          >{link}</a
         >{connect}
       </p>
       <div class="mt-4 sm:mt-6">
