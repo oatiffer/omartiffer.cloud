@@ -1,0 +1,13 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import Privacy from "@components/Privacy.astro";
+import { getEntry, type CollectionEntry } from "astro:content";
+
+const {
+  privacy: { pageTitle, ...rest },
+} = ((await getEntry("pages", "privacy")) as CollectionEntry<"pages">).data;
+---
+
+<BaseLayout title={`Omar Tiffer - ${pageTitle}`}>
+  <Privacy {...rest} />
+</BaseLayout>

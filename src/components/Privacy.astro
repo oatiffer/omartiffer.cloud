@@ -1,0 +1,64 @@
+---
+const {
+  title,
+  lastUpdated,
+  maintainer,
+  collectedData,
+  cookies,
+  ipAddrs,
+  purpose,
+  rights,
+  contact,
+} = Astro.props;
+---
+
+<section
+  class="w-full min-h-[calc(100dvh-128px)] text-lg text-base-content bg-base-300"
+>
+  <div
+    class="mx-auto max-w-screen-xl pt-24 pb-24 px-4 sm:px-6 lg:px-8 lg:pt-24"
+  >
+    <h1 class="text-2xl font-bold sm:text-4xl cool-underline">{title}</h1>
+    <p class="mt-12">
+      <span class="font-bold">Last Updated:</span>
+      {lastUpdated}
+    </p>
+    <p>{maintainer}</p>
+    <h3 class="mt-10 text-xl font-bold">1. Data Collected</h3>
+    <p>{collectedData.desc}</p>
+    <ul>
+      {
+        collectedData.list.map((item: string) => (
+          <li class="relative ml-6 before:absolute before:size-1 before:bg-accent before:rounded-full before:-left-4 before:top-3">
+            {item}
+          </li>
+        ))
+      }
+    </ul>
+    <h3 class="mt-6 text-xl font-bold">2. Cookies</h3>
+    <p>{cookies}</p>
+    <h3 class="mt-6 text-xl font-bold">3. Anonymized IP Addresses</h3>
+    <p>{ipAddrs}</p>
+    <h3 class="mt-6 text-xl font-bold">4. Purpose of Data Collection</h3>
+    <p>{purpose}</p>
+    <h3 class="mt-6 text-xl font-bold">5. Your Rights</h3>
+    <p>{rights.desc}</p>
+    <ul>
+      {
+        rights.list.map((item: string) => (
+          <li class="relative ml-6 before:absolute before:size-1 before:bg-accent before:rounded-full before:-left-4 before:top-3">
+            {item}
+          </li>
+        ))
+      }
+    </ul>
+    <h3 class="mt-6 text-xl font-bold">6. Contact</h3>
+    <p>
+      {contact}
+      <a
+        class="text-primary hover:text-secondary cursor-pointer underline underline-offset-4"
+        href="mailto:contact@omartiffer.cloud">Omar Tiffer</a
+      >
+    </p>
+  </div>
+</section>

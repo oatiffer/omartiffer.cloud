@@ -80,5 +80,24 @@ export const pages = defineCollection({
         ),
       })
       .optional(),
+    privacy: z
+      .object({
+        pageTitle: z.string(),
+        title: z.string(),
+        lastUpdated: z.string(),
+        maintainer: z.string(),
+        collectedData: z.object({
+          desc: z.string(),
+          list: z.array(z.string()),
+        }),
+        cookies: z.string(),
+        ipAddrs: z.string(),
+        purpose: z.string(),
+        rights: z.object({
+          desc: z.string(),
+          list: z.array(z.string()),
+        }),
+      })
+      .optional(),
   }),
 });
