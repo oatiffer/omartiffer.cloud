@@ -11,21 +11,7 @@ const { title } = Astro.props;
 <html lang="en" class="font-sans bg-base-300 text-base-content scrollbar-hide">
   <head>
     <MainHead pageTitle={title} />
-    <script
-      is:inline
-      src="https://www.googletagmanager.com/gtag/js?id=G-NW0FG1EMPL"
-    ></script><script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-NW0FG1EMPL");
-    </script></head
-  >
-
-  <!-- Google tag (gtag.js) -->
+  </head>
 
   <body>
     <div id="global-container" class="transition-all duration-300">

@@ -10,6 +10,18 @@ const { pageTitle } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
+<!-- Google tag (gtag.js) -->
+<script src="https://www.googletagmanager.com/gtag/js?id=G-NW0FG1EMPL"
+></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+
+  gtag("config", "G-NW0FG1EMPL");
+</script>
+
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width" />
 <link rel="canonical" href={canonicalURL} />
