@@ -35,7 +35,7 @@ const socialIcons = {
       fill: "[#EA4335]",
       width: 24,
       height: 24,
-      href: "mailto:me@omartiffer.cloud",
+      href: "mailto:hello@omartiffer.cloud",
     },
   ],
   about: [

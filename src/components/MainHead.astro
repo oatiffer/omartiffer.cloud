@@ -4,6 +4,7 @@ import "@fontsource-variable/fira-code";
 import "@fontsource-variable/jetbrains-mono";
 import "@fontsource/fira-sans";
 import "@fontsource-variable/jost";
+import { ClientRouter } from "astro:transitions";
 
 const { pageTitle } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -16,6 +17,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 <link rel="sitemap" href="/sitemap-index.xml" />
 <meta name="generator" content={Astro.generator} />
 <title>{pageTitle}</title>
+<ClientRouter />
 
 <script is:inline>
   // Get system theme preference on load

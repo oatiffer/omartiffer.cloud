@@ -30,4 +30,4 @@ const setTheme = (theme: string) => {
 
   // Persist the theme in localStorage
   localStorage.setItem("theme", theme);
-}
+};
