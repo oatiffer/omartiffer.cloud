@@ -9,6 +9,6 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
   site: "https://omartiffer.cloud",
+  trailingSlash: "never",
   integrations: [sitemap()],
 });
-
